@@ -1,6 +1,6 @@
 import java.io.IOException;
 
-public class StNodeInfo {
+public class StNodeInfo implements Comparable{
     String nodeName;
     String nodeIP;
     int nodePort;
@@ -15,11 +15,22 @@ public class StNodeInfo {
     }
 
     public static void main(String[] args) throws IOException {
+        StNodeInfo t1=new StNodeInfo();
+        t1.volume=new Volume(1000,100000000);
+        StNodeInfo t2=new StNodeInfo();
+        t2.volume=new Volume(546546879,100000000);
+        System.out.println(t1.compareTo(t2));
+
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return volume.compareTo(((StNodeInfo)o).volume);
     }
 }
 
 
-class Volume{
+class Volume implements Comparable{
     private long length;
 
     private long available;
@@ -46,5 +57,10 @@ class Volume{
             return (double)byteLength/1024/1024+"MB";
         else
             return (double)byteLength/1024/1024/1024+"GB";
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return (int)(-available+((Volume)o).available);
     }
 }

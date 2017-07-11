@@ -1,5 +1,3 @@
-import javax.annotation.processing.Filer;
-import java.awt.*;
 import java.io.*;
 import java.net.*;
 import java.util.*;
@@ -8,11 +6,13 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class FIleServer {
-    public static final int SERVER_PORT_NUM=30000;
-    public static final int SERVER_HEART_PORT =30001;
-    public static final String SERVER_IP="127.0.0.1";
-    public static final Map <String,String> registeredStNode=new HashMap<>();
-    public static final List<StNodeInfo> stNodeList=new ArrayList<>();
+    static final int SERVER_PORT_NUM=30000;
+    static final int SERVER_HEART_PORT =30001;
+    static final int SERVER_CLIENT_PORT=30002;
+    static final String SERVER_IP="127.0.0.1";
+    static final Map <String,String> registeredStNode=new HashMap<>();
+    static final List<StNodeInfo> stNodeList=new ArrayList<>();
+    static List<FileInfo> fileList=null;
 
     public static void updateStNodeInfo(StNodeInfo oldn,StNodeInfo newb){
         oldn.nodeIP=newb.nodeIP;
@@ -27,7 +27,7 @@ public class FIleServer {
         taskList =new LinkedList();
     }
 
-    void LoadStNode(){
+    void init(){
         try{
             BufferedReader br=new BufferedReader(new FileReader("RegisteredNode.txt"));
             String line;
@@ -35,18 +35,24 @@ public class FIleServer {
                 String[] arr=line.split(" ");
                 registeredStNode.put(arr[0],arr[1]);
             }
+
+            ObjectInputStream ism=new ObjectInputStream(new FileInputStream("FileInfo.txt"));
+            fileList=(List<FileInfo>)ism.readObject();
         }
         catch (IOException e){
             System.out.println(e.getMessage());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
     }
 
     public static void main(String[] args) throws IOException {
         FIleServer ser=new FIleServer();
-        ser.LoadStNode();
+        ser.init();
         ser.taskList.add(new NodeRegisterListener());
         ser.taskList.add(new HeartbeatListener());
         ser.taskList.add(new NodeAliveChecker());
+        ser.taskList.add(new ClientListener());
         ExecutorService exec= Executors.newCachedThreadPool();
         for(Object i:ser.taskList){
             exec.execute((Runnable) i);
@@ -192,6 +198,43 @@ class NodeAliveChecker implements Runnable{
             }
             finally {
                 Thread.yield();
+            }
+        }
+    }
+}
+
+class ClientListener implements Runnable{
+    private ServerSocket ss = new ServerSocket(FIleServer.SERVER_CLIENT_PORT);
+
+    ClientListener() throws IOException {
+    }
+
+    @Override
+    public void run() {
+        while (true){
+            Socket s;InputStream is;OutputStream os;
+            try {
+                s=ss.accept();
+                s.setSoTimeout(5000);
+                is=s.getInputStream();os=s.getOutputStream();
+                BufferedReader br=new BufferedReader(new InputStreamReader(is));
+                String md5=br.readLine();
+                BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(os));
+                for(FileInfo i:FIleServer.fileList){
+                    if(i.md5.equals(md5))
+                    {
+                        bw.write(i.mainNode.nodeIP+" "+i.mainNode.nodePort+"\n");
+                        bw.write(i.backupNode.nodeIP+" "+i.backupNode.nodePort+"\n");
+                        bw.write(UUID.randomUUID().toString());
+                        return;
+                    }
+                }
+                Collections.sort(FIleServer.stNodeList);
+                bw.write(FIleServer.stNodeList.get(0).nodeIP+" "+FIleServer.stNodeList.get(0).nodePort);
+                bw.write(FIleServer.stNodeList.get(1).nodeIP+" "+FIleServer.stNodeList.get(1).nodePort);
+                bw.write(UUID.randomUUID().toString());
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
             }
         }
     }

@@ -1,3 +1,5 @@
+import javax.annotation.processing.Filer;
+import javax.jnlp.FileOpenService;
 import java.io.*;
 import java.net.*;
 import java.util.ArrayList;
@@ -9,7 +11,7 @@ import java.util.concurrent.Executors;
 public class StorageNode {
     String nodeName;
     private String nodeIP;
-    private int nodePort;
+    int nodePort;
     private String rootDir;
     private Volume volume;
     String fileServerIP;
@@ -87,6 +89,7 @@ public class StorageNode {
             node.registerToServer();
             ExecutorService exec= Executors.newCachedThreadPool();
             node.taskList.add(new HeartBeatSender(node));
+            node.taskList.add(new FileListener(node))
             for(Runnable i:node.taskList){
                 exec.submit(i);
             }
@@ -160,6 +163,25 @@ class HeartBeatSender implements Runnable{
                 soc.close();
                 Thread.sleep(10000);
             } catch (InterruptedException | IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+class FileListener implements Runnable {
+    ServerSocket ss=new ServerSocket();
+    private final int FilePort;
+    public FileListener(StorageNode a) throws IOException {FilePort=a.nodePort;}
+    @Override
+    public void run() {
+        while (true){
+            try {
+                Socket soc=ss.accept();
+                soc.setSoTimeout(5000);
+
+
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         }
