@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="71307731-3aad-4ab7-8ac9-240f4cc13370" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileClient/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FileClient/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileClient/src/FileClient.java" afterPath="$PROJECT_DIR$/../FileClient/src/FileClient.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FileServer/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StTest.java" afterPath="$PROJECT_DIR$/src/StTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StorageNode.java" afterPath="$PROJECT_DIR$/src/StorageNode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage1.properties" afterPath="$PROJECT_DIR$/storage1.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -646,12 +642,12 @@
       <workItem from="1499783934936" duration="4544000" />
       <workItem from="1499847662408" duration="13053000" />
       <workItem from="1499911928216" duration="1212000" />
-      <workItem from="1499916643895" duration="18171000" />
+      <workItem from="1499916643895" duration="18627000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94952000" />
+    <option name="totallyTimeSpent" value="95408000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -664,6 +660,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
