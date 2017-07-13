@@ -1,5 +1,3 @@
-import javax.annotation.processing.Filer;
-import javax.jnlp.FileOpenService;
 import java.io.*;
 import java.net.*;
 import java.util.ArrayList;
@@ -12,7 +10,7 @@ public class StorageNode {
     String nodeName;
     private String nodeIP;
     int nodePort;
-    private String rootDir;
+    String rootDir;
     private Volume volume;
     String fileServerIP;
     int fileServerPort;
@@ -22,7 +20,7 @@ public class StorageNode {
 
     public StorageNode(String configureFileName){
         try{
-            InputStream in = new BufferedInputStream(new FileInputStream("storage1.properties"));
+            InputStream in = new BufferedInputStream(new FileInputStream(configureFileName));
             Properties prop=new Properties();
             prop.load(in);
             nodeName=(String) prop.get("NodeName");
@@ -43,7 +41,7 @@ public class StorageNode {
     private void registerToServer() throws InterruptedException {
         while (true){
             try{
-                System.out.printf("trying to connect to the server %s:%d....\n",fileServerIP,fileServerPort);
+                System.out.printf("[%s] trying to connect to the server %s:%d....\n",nodeName,fileServerIP,fileServerPort);
                 Socket soc=new Socket(fileServerIP,fileServerPort);
 
                 PrintStream out=new PrintStream(soc.getOutputStream());
@@ -55,14 +53,15 @@ public class StorageNode {
                 File tmp=new File(rootDir,uuid);
                 if(!tmp.exists()){
                     if(tmp.mkdir())
-                        System.out.printf("Creating directory %s successfully\n",uuid);
+                        System.out.printf("[%s] Creating directory %s successfully\n",nodeName,uuid);
                 }
-
+                rootDir=".\\"+uuid;
                 is.close();
                 bw.close();
                 out.close();
                 soc.close();
-                System.out.printf("Register to the File Server %s:%d successfully.\n",fileServerIP,fileServerPort);
+                System.out.printf("[%s] Register to the File Server %s:%d successfully.\n",nodeName,fileServerIP,fileServerPort);
+                System.out.printf("[%s] The root directory is %s\n",nodeName,rootDir);
                 break;
             }
             catch (IOException e){
@@ -89,7 +88,7 @@ public class StorageNode {
             node.registerToServer();
             ExecutorService exec= Executors.newCachedThreadPool();
             node.taskList.add(new HeartBeatSender(node));
-            node.taskList.add(new FileListener(node))
+            node.taskList.add(new FileListener(node));
             for(Runnable i:node.taskList){
                 exec.submit(i);
             }
@@ -152,11 +151,10 @@ class HeartBeatSender implements Runnable{
     public void run() {
         while (true) {
             try {
-                System.out.println("sdfs");
                 InetAddress add = InetAddress.getByName(info.fileServerIP);
 
                 byte[] buf = (info.nodeName + " ok").getBytes();
-                System.out.printf("sening heart beats of %s",info.nodeName);
+          //      System.out.printf("[%s] sending heart beats.\n",info.nodeName);
                 DatagramPacket dp = new DatagramPacket(buf, buf.length, add, info.fileServerHeatBeatPort);
                 DatagramSocket soc = new DatagramSocket();
                 soc.send(dp);
@@ -170,19 +168,82 @@ class HeartBeatSender implements Runnable{
 }
 
 class FileListener implements Runnable {
-    ServerSocket ss=new ServerSocket();
     private final int FilePort;
-    public FileListener(StorageNode a) throws IOException {FilePort=a.nodePort;}
+    private final String rootDir;
+    private final String nodeName;
+    ServerSocket ss;
+    public FileListener(StorageNode a) throws IOException
+    {
+        FilePort=a.nodePort;rootDir=a.rootDir;nodeName=a.nodeName;
+        ss=new ServerSocket(FilePort);
+    }
     @Override
     public void run() {
-        while (true){
+        while (true) {
             try {
-                Socket soc=ss.accept();
+                System.out.printf("[%s] Listen at port %d\n", nodeName, FilePort);
+                Socket soc = ss.accept();
                 soc.setSoTimeout(5000);
 
+                //Read the uuid and the forward table.
+                BufferedReader br = new BufferedReader(new InputStreamReader(soc.getInputStream()));
+                String forwardTable = br.readLine();
+                String uuid = br.readLine();
 
+                System.out.printf("[%s] Start receiving file\n", nodeName);
+                System.out.printf("[%s] The uuid of this file is : %s\n", nodeName, uuid);
+                System.out.printf("[%s] Backup Node : %s\n", nodeName, forwardTable);
+
+                //Read binary data of the file.
+                BufferedInputStream bs = new BufferedInputStream(soc.getInputStream());
+
+                //Save file to the disk.
+                FileOutputStream fout = new FileOutputStream(new File(rootDir, uuid));
+                int tmp;
+                int cnt = 0;
+                while ((tmp = bs.read()) != -1) {
+                    fout.write(tmp);
+                    cnt++;
+                }
+                fout.flush();
+                System.out.printf("[%s] Save file finished. Total %d bytes.\n",nodeName,cnt);
+
+                bs.close();
+                fout.close();
+                soc.close();
+                br.close();
+
+                //Forward the file to the backup storage node.
+                if (!forwardTable.equals("null"))
+                {
+                    String[] arr=forwardTable.split(" ");
+                    while (true) {
+                            System.out.printf("[%s] Starting forwarding to %s\n", nodeName, forwardTable);
+                            System.out.printf("[%s] Trying connecting to the server at %s\n",nodeName,forwardTable);
+                            soc = new Socket(arr[0], Integer.valueOf(arr[1]));
+                            PrintStream out = new PrintStream(soc.getOutputStream());
+                            out.println("null");
+                            out.println(uuid);
+
+                            StringBuilder sb = new StringBuilder();
+                            sb.append(rootDir);
+                            sb.append("\\");
+                            sb.append(uuid);
+                            br = new BufferedReader(new FileReader(sb.toString()));
+
+                            BufferedOutputStream bout = new BufferedOutputStream(soc.getOutputStream());
+                            while ((tmp = br.read()) != -1) {
+                                bout.write(tmp);
+                            }
+                            bout.flush();
+
+                            out.close();
+                            bout.close();
+                            soc.close();
+                    }
+                }
             } catch (IOException e) {
-                e.printStackTrace();
+                System.out.println(e.getMessage());
             }
         }
     }

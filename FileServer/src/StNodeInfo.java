@@ -20,7 +20,6 @@ public class StNodeInfo implements Comparable{
         StNodeInfo t2=new StNodeInfo();
         t2.volume=new Volume(546546879,100000000);
         System.out.println(t1.compareTo(t2));
-
     }
 
     @Override

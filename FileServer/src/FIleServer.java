@@ -1,3 +1,7 @@
+import com.sun.deploy.trace.FileTraceListener;
+import com.sun.org.apache.xerces.internal.util.ShadowedSymbolTable;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+
 import java.io.*;
 import java.net.*;
 import java.util.*;
@@ -12,7 +16,7 @@ public class FIleServer {
     static final String SERVER_IP="127.0.0.1";
     static final Map <String,String> registeredStNode=new HashMap<>();
     static final List<StNodeInfo> stNodeList=new ArrayList<>();
-    static List<FileInfo> fileList=null;
+    static List<FileInfo> fileList;
 
     public static void updateStNodeInfo(StNodeInfo oldn,StNodeInfo newb){
         oldn.nodeIP=newb.nodeIP;
@@ -44,20 +48,31 @@ public class FIleServer {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+        finally {
+            if(fileList==null){
+                fileList= new ArrayList<>();
+            }
+        }
     }
 
-    public static void main(String[] args) throws IOException {
-        FIleServer ser=new FIleServer();
-        ser.init();
-        ser.taskList.add(new NodeRegisterListener());
-        ser.taskList.add(new HeartbeatListener());
-        ser.taskList.add(new NodeAliveChecker());
-        ser.taskList.add(new ClientListener());
-        ExecutorService exec= Executors.newCachedThreadPool();
-        for(Object i:ser.taskList){
-            exec.execute((Runnable) i);
+    public static void main(String[] args){
+        try {
+            FIleServer ser=new FIleServer();
+            ser.init();
+            ser.taskList.add(new NodeRegisterListener());
+            ser.taskList.add(new HeartbeatListener());
+            ser.taskList.add(new NodeAliveChecker());
+            ser.taskList.add(new ClientListener());
+            ExecutorService exec= Executors.newCachedThreadPool();
+            for(Object i:ser.taskList){
+                exec.execute((Runnable) i);
+            }
+            exec.shutdown();
         }
-        exec.shutdown();
+        catch (IOException e){
+            System.out.println(e.getMessage());
+        }
+
     }
 }
 
@@ -158,10 +173,6 @@ class HeartbeatListener implements Runnable{
                     if(id!=-1)
                         FIleServer.stNodeList.remove(id);
                 }
-            } catch (SocketException e) {
-                e.printStackTrace();
-            } catch (UnknownHostException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -173,6 +184,7 @@ class HeartbeatListener implements Runnable{
 }
 
 class NodeAliveChecker implements Runnable{
+    int last=-1;
     @Override
     public void run() {
         while (true) {
@@ -180,7 +192,10 @@ class NodeAliveChecker implements Runnable{
             boolean flag;
             do {
                 flag = false;
-                System.out.printf("Active Storage Node number : %d\n", FIleServer.stNodeList.size());
+                if(FIleServer.stNodeList.size()!=last){
+                    System.out.printf("Active Storage Node number : %d\n", FIleServer.stNodeList.size());
+                    last=FIleServer.stNodeList.size();
+                }
                 for (int i = 0; i != FIleServer.stNodeList.size(); i++) {
                     if (cutime - FIleServer.stNodeList.get(i).lastVis > 15000) {
                         System.out.printf("'%s' %s:%s is not active! It's removed From the file server!\n",
@@ -203,7 +218,7 @@ class NodeAliveChecker implements Runnable{
     }
 }
 
-class ClientListener implements Runnable{
+class ClientListener implements Runnable {
     private ServerSocket ss = new ServerSocket(FIleServer.SERVER_CLIENT_PORT);
 
     ClientListener() throws IOException {
@@ -211,31 +226,82 @@ class ClientListener implements Runnable{
 
     @Override
     public void run() {
+        outside:
         while (true){
             Socket s;InputStream is;OutputStream os;
             try {
+                System.out.println("start listen");
                 s=ss.accept();
                 s.setSoTimeout(5000);
                 is=s.getInputStream();os=s.getOutputStream();
                 BufferedReader br=new BufferedReader(new InputStreamReader(is));
+
                 String md5=br.readLine();
+                String fname=br.readLine();
+                String flen=br.readLine();
+
                 BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(os));
-                for(FileInfo i:FIleServer.fileList){
-                    if(i.md5.equals(md5))
-                    {
-                        bw.write(i.mainNode.nodeIP+" "+i.mainNode.nodePort+"\n");
-                        bw.write(i.backupNode.nodeIP+" "+i.backupNode.nodePort+"\n");
-                        bw.write(UUID.randomUUID().toString());
-                        return;
+                if(FIleServer.fileList!=null){
+                    for(FileInfo i:FIleServer.fileList){
+                        if(i.md5.equals(md5))
+                        {
+                            bw.write("exist\n");
+                            bw.close();br.close();
+                            is.close();os.close();
+                            s.close();
+                            continue outside;
+                        }
                     }
                 }
+
                 Collections.sort(FIleServer.stNodeList);
-                bw.write(FIleServer.stNodeList.get(0).nodeIP+" "+FIleServer.stNodeList.get(0).nodePort);
-                bw.write(FIleServer.stNodeList.get(1).nodeIP+" "+FIleServer.stNodeList.get(1).nodePort);
-                bw.write(UUID.randomUUID().toString());
+                if(FIleServer.stNodeList.size()>=2){
+                    String mNode=FIleServer.stNodeList.get(0).nodeIP+" "+FIleServer.stNodeList.get(0).nodePort;
+                    String bNode=FIleServer.stNodeList.get(1).nodeIP+" "+FIleServer.stNodeList.get(1).nodePort;
+                    bw.write(mNode+"\n");
+                    bw.write(bNode+"\n");
+
+                    String uuid=UUID.randomUUID().toString();
+
+                    System.out.println("Receiving file uploading request.");
+                    System.out.printf(">>File Name: %s\n",fname);
+                    System.out.printf(">>File length: %s\n",flen);
+                    System.out.printf(">>MD5 of this file: %s\n",md5);
+                    System.out.printf(">>UUID of this file: %s\n",uuid);
+                    System.out.printf("Allocating main Storage Node %s to the client.",mNode);
+                    System.out.printf("Allocating backup Storage Node %s to the client.",bNode);
+                    FIleServer.fileList.add(new FileInfo(fname,uuid,Long.parseLong(flen),mNode,bNode,md5));
+//                    writeFileInfo();
+
+                    bw.write(uuid+"\n");
+
+                    bw.close();br.close();
+                    is.close();os.close();
+                    s.close();
+                }
+                else {
+                    throw new FileServerException("Not enough Storage node!");
+                }
             } catch (IOException e) {
                 System.out.println(e.getMessage());
+            } catch (FileServerException e) {
+                e.printStackTrace();
             }
         }
+    }
+
+    private void writeFileInfo() throws IOException {
+
+            ObjectOutputStream osm =new ObjectOutputStream(new FileOutputStream("FileInfo.txt"));
+            osm.writeObject(FIleServer.fileList);
+            osm.flush();osm.close();
+
+    }
+}
+
+class FileServerException extends Exception {
+    public FileServerException(){}
+    public FileServerException(String msg){
+        super(msg);
     }
 }

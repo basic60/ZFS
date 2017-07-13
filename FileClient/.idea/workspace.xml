@@ -2,18 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f025984-9216-4556-9aeb-73fed2d66a0e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FileServer/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FileServer/FileInfo.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../StorageNode/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../StorageNode/src/StTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../StorageNode/storage2.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../StorageNode/storage3.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../StorageNode/storage4.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FileClient.java" afterPath="$PROJECT_DIR$/src/FileClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.txt" afterPath="$PROJECT_DIR$/test.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FileServer/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/RegisteredNode.txt" afterPath="$PROJECT_DIR$/../FileServer/RegisteredNode.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/src/FIleServer.java" afterPath="$PROJECT_DIR$/../FileServer/src/FIleServer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/src/FileInfo.java" afterPath="$PROJECT_DIR$/../FileServer/src/FileInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/src/StNodeInfo.java" afterPath="$PROJECT_DIR$/../FileServer/src/StNodeInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../StorageNode/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/src/StorageNode.java" afterPath="$PROJECT_DIR$/../StorageNode/src/StorageNode.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/storage1.properties" afterPath="$PROJECT_DIR$/../StorageNode/storage1.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,14 +26,23 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="FileClient.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FileClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="161" column="37" lean-forward="true" selection-start-line="161" selection-start-column="37" selection-end-line="161" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
@@ -38,18 +50,7 @@
                 <element signature="method#download#0;class#FileClient#0" expanded="false" />
                 <element signature="method#delete#0;class#FileClient#0" expanded="false" />
                 <element signature="method#show#0;class#FileClient#0" expanded="false" />
-                <element signature="method#connect#0;class#FileClient#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SecureRandom.java" pinned="false" current-in-tab="false">
-        <entry file="jar://D:/Program Files/Java/jdk1.8.0_121/src.zip!/java/security/SecureRandom.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="187" column="11" lean-forward="false" selection-start-line="187" selection-start-column="11" selection-end-line="187" selection-end-column="11" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -85,6 +86,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
+  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
@@ -107,6 +111,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -135,16 +142,18 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Homework/untitled" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -587,11 +596,16 @@
       <workItem from="1499608886339" duration="2251000" />
       <workItem from="1499655691899" duration="30000" />
       <workItem from="1499689401736" duration="7204000" />
+      <workItem from="1499752077650" duration="599000" />
+      <workItem from="1499777933776" duration="9103000" />
+      <workItem from="1499847629291" duration="16410000" />
+      <workItem from="1499911837374" duration="2237000" />
+      <workItem from="1499915370141" duration="22163000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22608000" />
+    <option name="totallyTimeSpent" value="73120000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -605,20 +619,20 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18025751" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19313304" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997735" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3997735" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -636,7 +650,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -656,7 +670,6 @@
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
-            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -672,7 +685,6 @@
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
-            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -688,7 +700,6 @@
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
-            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -704,7 +715,50 @@
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
-            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_121/src.zip!/java/security/SecureRandom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3927">
+          <caret line="187" column="11" lean-forward="false" selection-start-line="187" selection-start-column="11" selection-end-line="187" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
+            <element signature="method#upload#0;class#FileClient#0" expanded="false" />
+            <element signature="method#download#0;class#FileClient#0" expanded="false" />
+            <element signature="method#delete#0;class#FileClient#0" expanded="false" />
+            <element signature="method#show#0;class#FileClient#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_121/src.zip!/java/security/SecureRandom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3297">
+          <caret line="187" column="11" lean-forward="false" selection-start-line="187" selection-start-column="11" selection-end-line="187" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
+            <element signature="method#upload#0;class#FileClient#0" expanded="false" />
+            <element signature="method#download#0;class#FileClient#0" expanded="false" />
+            <element signature="method#delete#0;class#FileClient#0" expanded="false" />
+            <element signature="method#show#0;class#FileClient#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -720,7 +774,51 @@
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
-            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
+            <element signature="method#upload#0;class#FileClient#0" expanded="false" />
+            <element signature="method#download#0;class#FileClient#0" expanded="false" />
+            <element signature="method#delete#0;class#FileClient#0" expanded="false" />
+            <element signature="method#show#0;class#FileClient#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
+            <element signature="method#upload#0;class#FileClient#0" expanded="false" />
+            <element signature="method#download#0;class#FileClient#0" expanded="false" />
+            <element signature="method#delete#0;class#FileClient#0" expanded="false" />
+            <element signature="method#show#0;class#FileClient#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
+            <element signature="method#upload#0;class#FileClient#0" expanded="false" />
+            <element signature="method#download#0;class#FileClient#0" expanded="false" />
+            <element signature="method#delete#0;class#FileClient#0" expanded="false" />
+            <element signature="method#show#0;class#FileClient#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -734,32 +832,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.txt">
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_121/src.zip!/java/security/SecureRandom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+        <state relative-caret-position="21">
+          <caret line="187" column="11" lean-forward="false" selection-start-line="187" selection-start-column="11" selection-end-line="187" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_121/src.zip!/java/io/ByteArrayOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="71" column="11" lean-forward="false" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_121/src.zip!/java/net/Socket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
+        <state relative-caret-position="356">
           <caret line="207" column="11" lean-forward="false" selection-start-line="207" selection-start-column="11" selection-end-line="207" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_121/src.zip!/java/security/SecureRandom.java">
+    <entry file="uml://JAVA/FileClient">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>FileClient</OriginalElement>
+          <nodes>
+            <node x="" y="">FileClient</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="64.0" y="17.5" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_121/src.zip!/java/io/BufferedOutputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="187" column="11" lean-forward="false" selection-start-line="187" selection-start-column="11" selection-end-line="187" selection-end-column="11" />
+        <state relative-caret-position="482">
+          <caret line="115" column="29" lean-forward="false" selection-start-line="115" selection-start-column="29" selection-end-line="115" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_121/src.zip!/java/security/MessageDigestSpi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="92" column="28" lean-forward="false" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_121/src.zip!/java/security/MessageDigest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="334" column="26" lean-forward="false" selection-start-line="334" selection-start-column="21" selection-end-line="334" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_121/src.zip!/java/io/BufferedReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="176" column="15" lean-forward="false" selection-start-line="176" selection-start-column="15" selection-end-line="176" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_121/src.zip!/java/io/BufferedInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="262" column="28" lean-forward="false" selection-start-line="262" selection-start-column="28" selection-end-line="262" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FileClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+        <state relative-caret-position="187">
+          <caret line="161" column="37" lean-forward="true" selection-start-line="161" selection-start-column="37" selection-end-line="161" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
@@ -767,7 +931,6 @@
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
-            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
           </folding>
         </state>
       </provider>
