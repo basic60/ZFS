@@ -248,7 +248,7 @@ ModelManifest.xml
 
 *.exe
 test.txt
-1bb9e862-2b49-4710-9e96-44722e950d5f/*
-9bdf461d-2ec5-4490-a4a9-061ab2d21306/*
-99ec11d2-2967-4881-b778-2f3a7c4a9df0/*
-9529388f-c23c-4423-92fd-5e63f8a6fdc5/*
+/StorageNode/1bb9e862-2b49-4710-9e96-44722e950d5f/*
+/StorageNode/9bdf461d-2ec5-4490-a4a9-061ab2d21306/*
+/StorageNode/99ec11d2-2967-4881-b778-2f3a7c4a9df0/*
+/StorageNode/9529388f-c23c-4423-92fd-5e63f8a6fdc5/*
