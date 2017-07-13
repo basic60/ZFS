@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ced539e-f312-408a-8261-748738c9dc31" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../StorageNode/src/StTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../StorageNode/storage2.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../StorageNode/storage3.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../StorageNode/storage4.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileClient/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FileClient/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileClient/src/FileClient.java" afterPath="$PROJECT_DIR$/../FileClient/src/FileClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileClient/test.txt" afterPath="$PROJECT_DIR$/../FileClient/test.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RegisteredNode.txt" afterPath="$PROJECT_DIR$/RegisteredNode.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FIleServer.java" afterPath="$PROJECT_DIR$/src/FIleServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FileInfo.java" afterPath="$PROJECT_DIR$/src/FileInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StNodeInfo.java" afterPath="$PROJECT_DIR$/src/StNodeInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../StorageNode/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/src/StTest.java" afterPath="$PROJECT_DIR$/../StorageNode/src/StTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/src/StorageNode.java" afterPath="$PROJECT_DIR$/../StorageNode/src/StorageNode.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/storage1.properties" afterPath="$PROJECT_DIR$/../StorageNode/storage1.properties" />
     </list>
@@ -44,8 +35,8 @@
       <file leaf-file-name="FIleServer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FIleServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="225" column="0" lean-forward="true" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
+            <state relative-caret-position="328">
+              <caret line="300" column="0" lean-forward="true" selection-start-line="300" selection-start-column="0" selection-end-line="300" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#updateStNodeInfo#0;class#FIleServer#0" expanded="false" />
@@ -729,16 +720,15 @@
       <workItem from="1499783929714" duration="4446000" />
       <workItem from="1499847673444" duration="17680000" />
       <workItem from="1499912628799" duration="594000" />
-      <workItem from="1499916639324" duration="11433000" />
+      <workItem from="1499916639324" duration="14616000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117249000" />
+    <option name="totallyTimeSpent" value="120432000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -761,7 +751,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3227633" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3227633" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18937768" sideWeight="0.50396377" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1371,8 +1361,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FIleServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="225" column="0" lean-forward="true" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
+        <state relative-caret-position="328">
+          <caret line="300" column="0" lean-forward="true" selection-start-line="300" selection-start-column="0" selection-end-line="300" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#updateStNodeInfo#0;class#FIleServer#0" expanded="false" />

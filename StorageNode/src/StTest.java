@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+//To start four threads of Storage Node at once.
 public class StTest {
     private static final List<Runnable> taskList=new ArrayList<>();
 
@@ -20,11 +21,13 @@ public class StTest {
         exec.shutdown();
     }
 }
+
 class StartMain implements Runnable{
     private String[] args;
     public StartMain(String[] var){args=var;}
     @Override
     public void run() {
+       // StorageNode tmp=new StorageNode();
         StorageNode.main(args);
     }
 }

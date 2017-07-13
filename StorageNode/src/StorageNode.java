@@ -78,6 +78,9 @@ public class StorageNode {
         out.flush();
     }
 
+    /*
+    *<========Use StTest.java to run multiple threads of Storage Node at once=================>
+    */
     public static void main(String[] args){
         try{
             if(args.length!=1){
@@ -171,8 +174,8 @@ class FileListener implements Runnable {
     private final int FilePort;
     private final String rootDir;
     private final String nodeName;
-    ServerSocket ss;
-    public FileListener(StorageNode a) throws IOException
+    private ServerSocket ss;
+    FileListener(StorageNode a) throws IOException
     {
         FilePort=a.nodePort;rootDir=a.rootDir;nodeName=a.nodeName;
         ss=new ServerSocket(FilePort);
@@ -190,9 +193,9 @@ class FileListener implements Runnable {
                 String forwardTable = br.readLine();
                 String uuid = br.readLine();
 
-                System.out.printf("[%s] Start receiving file\n", nodeName);
-                System.out.printf("[%s] The uuid of this file is : %s\n", nodeName, uuid);
-                System.out.printf("[%s] Backup Node : %s\n", nodeName, forwardTable);
+                System.out.printf("[%s-file] Start receiving file\n", nodeName);
+                System.out.printf("[%s-file] The uuid of this file is : %s\n", nodeName, uuid);
+                System.out.printf("[%s-file] Backup Node : %s\n", nodeName, forwardTable);
 
                 //Read binary data of the file.
                 BufferedInputStream bs = new BufferedInputStream(soc.getInputStream());
@@ -206,7 +209,7 @@ class FileListener implements Runnable {
                     cnt++;
                 }
                 fout.flush();
-                System.out.printf("[%s] Save file finished. Total %d bytes.\n",nodeName,cnt);
+                System.out.printf("[%s-file] Save file finished. Total %d bytes.\n",nodeName,cnt);
 
                 bs.close();
                 fout.close();
@@ -216,35 +219,45 @@ class FileListener implements Runnable {
                 //Forward the file to the backup storage node.
                 if (!forwardTable.equals("null"))
                 {
-                    String[] arr=forwardTable.split(" ");
-                    while (true) {
-                            System.out.printf("[%s] Starting forwarding to %s\n", nodeName, forwardTable);
-                            System.out.printf("[%s] Trying connecting to the server at %s\n",nodeName,forwardTable);
-                            soc = new Socket(arr[0], Integer.valueOf(arr[1]));
-                            PrintStream out = new PrintStream(soc.getOutputStream());
-                            out.println("null");
-                            out.println(uuid);
-
-                            StringBuilder sb = new StringBuilder();
-                            sb.append(rootDir);
-                            sb.append("\\");
-                            sb.append(uuid);
-                            br = new BufferedReader(new FileReader(sb.toString()));
-
-                            BufferedOutputStream bout = new BufferedOutputStream(soc.getOutputStream());
-                            while ((tmp = br.read()) != -1) {
-                                bout.write(tmp);
-                            }
-                            bout.flush();
-
-                            out.close();
-                            bout.close();
-                            soc.close();
-                    }
+                    forward(uuid,forwardTable);
+                    System.out.printf("[%s-file] Forward file  finished.\n",nodeName);
                 }
             } catch (IOException e) {
                 System.out.println(e.getMessage());
             }
         }
+    }
+
+    void forward(String uuid,String forwardTable){
+        Socket soc;
+        String[] arr=forwardTable.split(" ");
+        try{
+            while (true) {
+                System.out.printf("[%s-forward] Start forwarding to %s\n", nodeName, forwardTable);
+                System.out.printf("[%s-forward] Try connecting to the server at %s\n",nodeName,forwardTable);
+                soc = new Socket(arr[0], Integer.valueOf(arr[1]));
+                System.out.printf("[%s-forward] Connect to the server successfully\n",nodeName);
+                PrintStream out = new PrintStream(soc.getOutputStream());
+                out.println("null");
+                out.println(uuid);
+
+                BufferedInputStream bin = new BufferedInputStream(new FileInputStream(new File(rootDir,uuid)));
+                BufferedOutputStream bout=new BufferedOutputStream(soc.getOutputStream());
+                int tmp;
+                while ((tmp = bin.read()) != -1) {
+                    bout.write(tmp);
+                }
+                bout.flush();
+
+                out.close();
+                bout.close();
+                soc.close();
+                break;
+            }
+        }
+        catch (IOException e){
+            System.out.println(e.getMessage());
+        }
+
     }
 }

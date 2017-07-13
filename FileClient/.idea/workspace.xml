@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f025984-9216-4556-9aeb-73fed2d66a0e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../StorageNode/src/StTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../StorageNode/storage2.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../StorageNode/storage3.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../StorageNode/storage4.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FileClient.java" afterPath="$PROJECT_DIR$/src/FileClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.txt" afterPath="$PROJECT_DIR$/test.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FileServer/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/RegisteredNode.txt" afterPath="$PROJECT_DIR$/../FileServer/RegisteredNode.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/src/FIleServer.java" afterPath="$PROJECT_DIR$/../FileServer/src/FIleServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/src/FileInfo.java" afterPath="$PROJECT_DIR$/../FileServer/src/FileInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/src/StNodeInfo.java" afterPath="$PROJECT_DIR$/../FileServer/src/StNodeInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../StorageNode/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/src/StTest.java" afterPath="$PROJECT_DIR$/../StorageNode/src/StTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/src/StorageNode.java" afterPath="$PROJECT_DIR$/../StorageNode/src/StorageNode.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/storage1.properties" afterPath="$PROJECT_DIR$/../StorageNode/storage1.properties" />
     </list>
@@ -41,15 +32,16 @@
       <file leaf-file-name="FileClient.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FileClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="161" column="37" lean-forward="true" selection-start-line="161" selection-start-column="37" selection-end-line="161" selection-end-column="37" />
+            <state relative-caret-position="301">
+              <caret line="121" column="24" lean-forward="true" selection-start-line="121" selection-start-column="24" selection-end-line="121" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
-                <element signature="method#upload#0;class#FileClient#0" expanded="false" />
                 <element signature="method#download#0;class#FileClient#0" expanded="false" />
                 <element signature="method#delete#0;class#FileClient#0" expanded="false" />
                 <element signature="method#show#0;class#FileClient#0" expanded="false" />
+                <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
+                <element signature="method#main#0;class#FileClient#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -600,16 +592,15 @@
       <workItem from="1499777933776" duration="9103000" />
       <workItem from="1499847629291" duration="16410000" />
       <workItem from="1499911837374" duration="2237000" />
-      <workItem from="1499915370141" duration="22163000" />
+      <workItem from="1499915370141" duration="26667000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73120000" />
+    <option name="totallyTimeSpent" value="77624000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -666,10 +657,11 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
-            <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
+            <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
+            <element signature="method#main#0;class#FileClient#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -681,10 +673,11 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
-            <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
+            <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
+            <element signature="method#main#0;class#FileClient#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -696,10 +689,11 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
-            <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
+            <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
+            <element signature="method#main#0;class#FileClient#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -711,10 +705,11 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
-            <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
+            <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
+            <element signature="method#main#0;class#FileClient#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -733,10 +728,11 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
-            <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
+            <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
+            <element signature="method#main#0;class#FileClient#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -755,10 +751,11 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
-            <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
+            <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
+            <element signature="method#main#0;class#FileClient#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -770,10 +767,11 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
-            <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
+            <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
+            <element signature="method#main#0;class#FileClient#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -785,10 +783,11 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
-            <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
+            <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
+            <element signature="method#main#0;class#FileClient#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -800,10 +799,11 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
-            <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
+            <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
+            <element signature="method#main#0;class#FileClient#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -815,10 +815,11 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
-            <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
+            <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
+            <element signature="method#main#0;class#FileClient#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -922,15 +923,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FileClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="161" column="37" lean-forward="true" selection-start-line="161" selection-start-column="37" selection-end-line="161" selection-end-column="37" />
+        <state relative-caret-position="301">
+          <caret line="121" column="24" lean-forward="true" selection-start-line="121" selection-start-column="24" selection-end-line="121" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
-            <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
+            <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
+            <element signature="method#main#0;class#FileClient#0" expanded="false" />
           </folding>
         </state>
       </provider>
