@@ -1,9 +1,12 @@
 import com.sun.deploy.trace.FileTraceListener;
 import com.sun.org.apache.xerces.internal.util.ShadowedSymbolTable;
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+import org.omg.PortableServer.THREAD_POLICY_ID;
+import sun.rmi.runtime.Log;
 
 import java.io.*;
 import java.net.*;
+import java.rmi.server.ServerNotActiveException;
 import java.util.*;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -18,37 +21,20 @@ public class FIleServer {
     static final List<StNodeInfo> stNodeList=new ArrayList<>();
     static List<FileInfo> fileList;
 
-    public static void updateStNodeInfo(StNodeInfo oldn,StNodeInfo newb){
-        oldn.nodeIP=newb.nodeIP;
-        oldn.nodePort=newb.nodePort;
-        oldn.volume=newb.volume;
-        oldn.uuid=newb.uuid;
-    }
-
     private List<Runnable> taskList;
 
-    FIleServer(){
-        taskList =new LinkedList();
+    private FIleServer(){
+        taskList =new LinkedList<>();
     }
 
-    void init(){
+    private void init(){
         try{
-            BufferedReader br=new BufferedReader(new FileReader("RegisteredNode.txt"));
-            String line;
-            while ((line=br.readLine())!=null){
-                String[] arr=line.split(" ");
-                registeredStNode.put(arr[0],arr[1]);
-            }
-
             ObjectInputStream ism=new ObjectInputStream(new FileInputStream("FileInfo.txt"));
             fileList=(List<FileInfo>)ism.readObject();
         }
-        catch (IOException e){
+        catch (IOException | ClassNotFoundException e){
             System.out.println(e.getMessage());
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        finally {
+        } finally {
             if(fileList==null){
                 fileList= new ArrayList<>();
             }
@@ -59,7 +45,6 @@ public class FIleServer {
         try {
             FIleServer ser=new FIleServer();
             ser.init();
-            ser.taskList.add(new NodeRegisterListener());
             ser.taskList.add(new HeartbeatListener());
             ser.taskList.add(new NodeAliveChecker());
             ser.taskList.add(new ClientListener());
@@ -76,71 +61,6 @@ public class FIleServer {
     }
 }
 
-class NodeRegisterListener implements Runnable {
-    private ServerSocket ss = new ServerSocket(FIleServer.SERVER_PORT_NUM);
-
-    NodeRegisterListener() throws IOException {
-    }
-
-    void writeBack() throws IOException {
-        BufferedWriter bw=new BufferedWriter(new FileWriter("RegisteredNode.txt"));;
-        for(Map.Entry<String, String> i:FIleServer.registeredStNode.entrySet()){
-            System.out.println(i.getKey()+" "+i.getValue());
-            bw.write(i.getKey()+" "+i.getValue()+"\n");
-        }
-        bw.flush();
-        bw.close();
-    }
-
-    @Override
-    public void run() {
-        while (true){
-            Socket s;
-            InputStream is;OutputStream os;
-            try{
-                System.out.println("Listening...............");
-                s=ss.accept();
-                s.setSoTimeout(3000);
-                is=s.getInputStream();
-                os=s.getOutputStream();
-
-                BufferedReader br=new BufferedReader(new InputStreamReader(is));
-                StNodeInfo tmp=new StNodeInfo();
-                tmp.nodeName=br.readLine();
-                tmp.nodeIP=br.readLine();
-                tmp.nodePort=Integer.parseInt(br.readLine());
-                tmp.volume=new Volume(Long.parseLong(br.readLine()),Long.parseLong(br.readLine()));
-
-                if(!FIleServer.registeredStNode.containsKey(tmp.nodeName)){
-                    tmp.uuid=UUID.randomUUID().toString();
-                    FIleServer.registeredStNode.put(tmp.nodeName,tmp.uuid);
-                    writeBack();
-                }
-                else {
-                    tmp.uuid=FIleServer.registeredStNode.get(tmp.nodeName);
-                }
-                tmp.lastVis=System.currentTimeMillis();
-                FIleServer.stNodeList.add(tmp);
-
-
-                PrintStream pw=new PrintStream(os);
-                pw.println(tmp.uuid);
-                pw.flush();
-
-                pw.close();
-                br.close();
-                is.close();
-                s.close();
-                System.out.printf("Storage Node %s %s:%s added to the File Server.\n",tmp.nodeName,tmp.nodeIP,tmp.nodePort);
-                Thread.yield();
-            }
-            catch (IOException e){
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-}
-
 class HeartbeatListener implements Runnable{
     @Override
     public void run() {
@@ -153,31 +73,23 @@ class HeartbeatListener implements Runnable{
                 soc.receive(datapacket);
                 soc.close();
                 String msg=new String(buffer,0,datapacket.getLength());
-                System.out.println("Receiving message "+msg);
-                String[] arr=msg.split(" ");
-                if(arr[1].equals("ok")){
-                    for(int i=0;i!=FIleServer.stNodeList.size();i++){
-                        if(FIleServer.stNodeList.get(i).nodeName.equals(arr[0])){
-                            FIleServer.stNodeList.get(i).lastVis=System.currentTimeMillis();
-                        }
+                System.out.println("Receive message:\n"+msg);
+
+                boolean flag=false;
+                String[] arr=msg.split("\n");
+                StNodeInfo tmp=new StNodeInfo(arr[0],arr[1],Integer.parseInt(arr[2]),Long.parseLong(arr[3]), Long.parseLong(arr[4]));
+                tmp.lastVis=System.currentTimeMillis();
+                for(StNodeInfo i: FIleServer.stNodeList){
+                    if(i.nodeName.equals(arr[0])){
+                        i.lastVis=tmp.lastVis;
+                        i.volume.setAvailableBytes(tmp.volume.getAvailalblebytes());
+                        flag=true;
                     }
                 }
-                else if(arr[1].equals("end")){
-                    int id=-1;
-                    for(int i=0;i!=FIleServer.stNodeList.size();i++){
-                        if(FIleServer.stNodeList.get(i).nodeName.equals(arr[0])){
-                            id=i;
-                            break;
-                        }
-                    }
-                    if(id!=-1)
-                        FIleServer.stNodeList.remove(id);
-                }
+                if(!flag)
+                    FIleServer.stNodeList.add(tmp);
             } catch (IOException e) {
-                e.printStackTrace();
-            }
-            finally {
-                Thread.yield();
+                System.out.println(e.getMessage());
             }
         }
     }
@@ -230,7 +142,6 @@ class ClientListener implements Runnable {
         while (true){
             Socket s;InputStream is;OutputStream os;
             try {
-                System.out.println("start listen");
                 s=ss.accept();
                 s.setSoTimeout(5000);
                 is=s.getInputStream();os=s.getOutputStream();
@@ -295,7 +206,6 @@ class ClientListener implements Runnable {
             ObjectOutputStream osm =new ObjectOutputStream(new FileOutputStream("FileInfo.txt"));
             osm.writeObject(FIleServer.fileList);
             osm.flush();osm.close();
-
     }
 }
 

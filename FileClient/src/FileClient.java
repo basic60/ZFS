@@ -93,6 +93,7 @@ public class FileClient {
             System.out.printf("Connecting to the Storage Node %s:%s\n", arr[0], arr[1]);
             socket = new Socket(arr[0], Integer.valueOf(arr[1]));
             out = new PrintStream(socket.getOutputStream());
+            out.println("upload");
             out.println(nodeBack);
             out.println(uuid);
             out.flush();

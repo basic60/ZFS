@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f025984-9216-4556-9aeb-73fed2d66a0e" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../FileServer/RegisteredNode.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FileClient.java" afterPath="$PROJECT_DIR$/src/FileClient.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FileServer/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/src/FIleServer.java" afterPath="$PROJECT_DIR$/../FileServer/src/FIleServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/src/StNodeInfo.java" afterPath="$PROJECT_DIR$/../FileServer/src/StNodeInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Monitor/Monitor/MainWindow.xaml" afterPath="$PROJECT_DIR$/../Monitor/Monitor/MainWindow.xaml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../StorageNode/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/src/StTest.java" afterPath="$PROJECT_DIR$/../StorageNode/src/StTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/src/StorageNode.java" afterPath="$PROJECT_DIR$/../StorageNode/src/StorageNode.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/storage1.properties" afterPath="$PROJECT_DIR$/../StorageNode/storage1.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/storage2.properties" afterPath="$PROJECT_DIR$/../StorageNode/storage2.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/storage3.properties" afterPath="$PROJECT_DIR$/../StorageNode/storage3.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/storage4.properties" afterPath="$PROJECT_DIR$/../StorageNode/storage4.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,14 +40,14 @@
       <file leaf-file-name="FileClient.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FileClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="121" column="24" lean-forward="true" selection-start-line="121" selection-start-column="24" selection-end-line="121" selection-end-column="24" />
+            <state relative-caret-position="340">
+              <caret line="101" column="34" lean-forward="false" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
                 <element signature="method#download#0;class#FileClient#0" expanded="false" />
                 <element signature="method#delete#0;class#FileClient#0" expanded="false" />
                 <element signature="method#show#0;class#FileClient#0" expanded="false" />
+                <element signature="method#connect#0;class#FileClient#0" expanded="false" />
                 <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
                 <element signature="method#main#0;class#FileClient#0" expanded="false" />
               </folding>
@@ -99,9 +111,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -130,12 +139,15 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Homework/untitled" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -588,16 +600,16 @@
       <workItem from="1499777933776" duration="9103000" />
       <workItem from="1499847629291" duration="16410000" />
       <workItem from="1499911837374" duration="2237000" />
-      <workItem from="1499915370141" duration="27123000" />
+      <workItem from="1499915370141" duration="27232000" />
+      <workItem from="1499997659221" duration="9972000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78080000" />
+    <option name="totallyTimeSpent" value="88161000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -614,13 +626,13 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19313304" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19581544" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3997735" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3997735" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -653,10 +665,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
+            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
             <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
           </folding>
@@ -669,10 +681,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
+            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
             <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
           </folding>
@@ -685,10 +697,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
+            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
             <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
           </folding>
@@ -701,10 +713,26 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
+            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
+            <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
+            <element signature="method#main#0;class#FileClient#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#download#0;class#FileClient#0" expanded="false" />
+            <element signature="method#delete#0;class#FileClient#0" expanded="false" />
+            <element signature="method#show#0;class#FileClient#0" expanded="false" />
+            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
             <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
           </folding>
@@ -724,10 +752,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
+            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
             <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
           </folding>
@@ -747,10 +775,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
+            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
             <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
           </folding>
@@ -763,10 +791,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
+            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
             <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
           </folding>
@@ -779,10 +807,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
+            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
             <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
           </folding>
@@ -795,10 +823,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
+            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
             <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
           </folding>
@@ -811,10 +839,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
+            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
             <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
           </folding>
@@ -862,7 +890,7 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="64.0" y="17.5" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="64.0" y="18.0" />
           <SelectedNodes />
           <Categories />
           <SCOPE>All</SCOPE>
@@ -882,7 +910,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
           <caret line="92" column="28" lean-forward="false" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -914,20 +941,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FileClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="121" column="24" lean-forward="true" selection-start-line="121" selection-start-column="24" selection-end-line="121" selection-end-column="24" />
+        <state relative-caret-position="340">
+          <caret line="101" column="34" lean-forward="false" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
             <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#show#0;class#FileClient#0" expanded="false" />
+            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
             <element signature="method#aesEncrypt#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
           </folding>

@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="Monitor" Height="350" Width="525">
     <Grid>
-        
+        <ListBox>
+            <ListBoxItem>asdasd</ListBoxItem>
+            <ListBoxItem>sdfsdf</ListBoxItem>
+        </ListBox>
     </Grid>
 </Window>

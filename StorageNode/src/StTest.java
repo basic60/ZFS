@@ -27,7 +27,6 @@ class StartMain implements Runnable{
     public StartMain(String[] var){args=var;}
     @Override
     public void run() {
-       // StorageNode tmp=new StorageNode();
         StorageNode.main(args);
     }
 }

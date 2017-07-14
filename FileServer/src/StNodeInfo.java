@@ -43,6 +43,10 @@ class Volume implements Comparable{
         return length;
     }
 
+    public void setAvailableBytes(long val){
+        available=val;
+    }
+
     public long getAvailalblebytes(){
         return available;
     }
