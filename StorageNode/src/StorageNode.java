@@ -1,3 +1,4 @@
+import javax.jnlp.FileOpenService;
 import java.io.*;
 import java.net.*;
 import java.util.*;
@@ -82,7 +83,6 @@ public class StorageNode {
 
 class Volume{
     private long length;
-
     private long available;
 
     Volume(String len){
@@ -133,15 +133,34 @@ class FileListener implements Runnable {
     private final String rootDir;
     private final String nodeName;
     private final Volume volume;
+    private final String fileServerIP;
     private final Properties prop;
+    private final int FILEOP_PORT=30003;
     private ServerSocket ss;
     Socket soc;
     BufferedReader br;
     FileListener(StorageNode a) throws IOException
     {
         FilePort=a.nodePort;rootDir=a.rootDir;nodeName=a.nodeName;
-        volume=a.volume;prop=a.prop;
+        volume=a.volume;prop=a.prop;fileServerIP=a.fileServerIP;
         ss=new ServerSocket(FilePort);
+    }
+
+    private void notifyUploadFileSize(String uuid,long size){
+        InetAddress add = null;
+        while (true){
+            try {
+                add = InetAddress.getByName(fileServerIP);
+                byte[] buffer=String.format("upload\n%s\n%d",uuid,size).getBytes();
+                DatagramPacket dp=new DatagramPacket(buffer,buffer.length,add,FILEOP_PORT);
+                DatagramSocket dc=new DatagramSocket();
+                dc.send(dp);
+                dc.close();
+                break;
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
+        }
     }
 
     //Upload the file.
@@ -169,7 +188,6 @@ class FileListener implements Runnable {
             volume.minus(cnt);
             System.out.printf("[%s-file] Save file finished. Total %d bytes.\n",nodeName,cnt);
 
-
             bs.close();
             fout.close();
             soc.close();
@@ -178,6 +196,7 @@ class FileListener implements Runnable {
             //Forward the file to the backup storage node.
             if (!forwardTable.equals("null"))
             {
+                notifyUploadFileSize(uuid,cnt);
                 forward(uuid,forwardTable);
                 System.out.printf("[%s-file] Forward file finished.\n",nodeName);
             }
@@ -220,6 +239,15 @@ class FileListener implements Runnable {
         }
     }
 
+    void download(String uuid){
+        try {
+            FileInputStream fin=new FileInputStream(new File(rootDir,uuid));
+            Socket soc=
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public void run() {
         while (true) {
@@ -233,6 +261,8 @@ class FileListener implements Runnable {
                 String commmand = br.readLine();
                 if (commmand.equals("upload"))
                     upload();
+                else if(commmand.equals("download"))
+                    download(br.readLine());
             }
             catch (IOException e){
                 System.out.println(e.getMessage());
@@ -263,7 +293,7 @@ class RegisterAndUpdate implements Runnable{
                 dc.send(dp);
                 dc.close();
                // System.out.printf("[%s-Update] Update volume and send heart beat packet.\n",node.nodeName);
-                Thread.sleep(10000);
+                Thread.sleep(5000);
             } catch (InterruptedException | IOException e) {
                 System.out.println(e.getMessage());
             }

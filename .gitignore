@@ -248,6 +248,7 @@ ModelManifest.xml
 
 *.exe
 test.txt
+*.dat
 /StorageNode/Node1/*
 /StorageNode/Node2/*
 /StorageNode/Node3/*

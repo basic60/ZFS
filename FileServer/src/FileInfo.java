@@ -5,6 +5,7 @@ public class FileInfo implements Serializable{
     String fileName;
     String uuid;
     long length;
+    long actualLength=0;
     String  mainNode;
     String  backupNode;
     String md5;

@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ced539e-f312-408a-8261-748738c9dc31" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RegisteredNode.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileClient/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FileClient/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileClient/src/FileClient.java" afterPath="$PROJECT_DIR$/../FileClient/src/FileClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileClient/test.txt" afterPath="$PROJECT_DIR$/../FileClient/test.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FIleServer.java" afterPath="$PROJECT_DIR$/src/FIleServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FileInfo.java" afterPath="$PROJECT_DIR$/src/FileInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StNodeInfo.java" afterPath="$PROJECT_DIR$/src/StNodeInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Monitor/Monitor/MainWindow.xaml" afterPath="$PROJECT_DIR$/../Monitor/Monitor/MainWindow.xaml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../StorageNode/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/src/StTest.java" afterPath="$PROJECT_DIR$/../StorageNode/src/StTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/src/StorageNode.java" afterPath="$PROJECT_DIR$/../StorageNode/src/StorageNode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/storage1.properties" afterPath="$PROJECT_DIR$/../StorageNode/storage1.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/storage2.properties" afterPath="$PROJECT_DIR$/../StorageNode/storage2.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/storage3.properties" afterPath="$PROJECT_DIR$/../StorageNode/storage3.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/storage4.properties" afterPath="$PROJECT_DIR$/../StorageNode/storage4.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FileInfo.txt" afterPath="$PROJECT_DIR$/FileInfo.dat" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,35 +39,21 @@
       <file leaf-file-name="FIleServer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FIleServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="213" column="43" lean-forward="false" selection-start-line="213" selection-start-column="43" selection-end-line="213" selection-end-column="43" />
+            <state relative-caret-position="223">
+              <caret line="191" column="0" lean-forward="false" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#904#905#0" expanded="true" />
-                <element signature="e#948#949#0" expanded="true" />
-                <element signature="method#init#0;class#FIleServer#0" expanded="false" />
+                <element signature="e#613#614#0" expanded="true" />
+                <element signature="e#657#658#0" expanded="true" />
                 <element signature="method#main#0;class#FIleServer#0" expanded="false" />
                 <element signature="class#HeartbeatListener#0" expanded="false" />
                 <element signature="class#NodeAliveChecker#0" expanded="false" />
-                <element signature="class#ClientListener#0" expanded="false" />
-                <element signature="e#8001#8002#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StNodeInfo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StNodeInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="45" column="10" lean-forward="false" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
-              <folding>
-                <element signature="e#729#730#0" expanded="true" />
-                <element signature="e#792#793#0" expanded="true" />
-                <element signature="method#Volume#0;class#Volume#0" expanded="false" />
-                <element signature="e#1076#1077#0" expanded="true" />
-                <element signature="e#1105#1106#0" expanded="true" />
-                <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
+                <element signature="method#ClientListener#0;class#ClientListener#0" expanded="false" />
+                <element signature="method#upload#0;class#ClientListener#0" expanded="false" />
+                <element signature="class#FileServerException#0" expanded="false" />
+                <element signature="e#8544#8545#0" expanded="true" />
+                <element signature="e#8570#8571#0" expanded="true" />
+                <element signature="class#FileOperationListener#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -89,6 +71,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>start</find>
+      <find>setSoTimeout</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -105,9 +88,9 @@
         <option value="$PROJECT_DIR$/src/main.java" />
         <option value="$PROJECT_DIR$/storage1.properties" />
         <option value="$PROJECT_DIR$/src/StorageNode.java" />
+        <option value="$PROJECT_DIR$/RegisteredNode.txt" />
         <option value="$PROJECT_DIR$/src/FileInfo.java" />
         <option value="$PROJECT_DIR$/FileInfo.txt" />
-        <option value="$PROJECT_DIR$/RegisteredNode.txt" />
         <option value="$PROJECT_DIR$/src/StNodeInfo.java" />
         <option value="$PROJECT_DIR$/src/FIleServer.java" />
       </list>
@@ -725,15 +708,16 @@
       <workItem from="1499847673444" duration="17680000" />
       <workItem from="1499912628799" duration="594000" />
       <workItem from="1499916639324" duration="15666000" />
-      <workItem from="1499997602284" duration="15108000" />
+      <workItem from="1499997602284" duration="32337000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136590000" />
+    <option name="totallyTimeSpent" value="153819000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -758,7 +742,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18937768" sideWeight="0.50396377" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3227633" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3227633" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -774,7 +758,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="30" />
+      <option name="time" value="42" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -783,34 +767,16 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/FIleServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2919">
-          <caret line="236" column="29" lean-forward="false" selection-start-line="236" selection-start-column="29" selection-end-line="236" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="method#init#0;class#FIleServer#0" expanded="false" />
-            <element signature="method#main#0;class#FIleServer#0" expanded="false" />
-            <element signature="class#HeartbeatListener#0" expanded="false" />
-            <element signature="class#NodeAliveChecker#0" expanded="false" />
-            <element signature="class#ClientListener#0" expanded="false" />
-            <element signature="e#8001#8002#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/StNodeInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
-            <element signature="e#1076#1077#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
           </folding>
         </state>
@@ -822,14 +788,17 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="method#init#0;class#FIleServer#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
             <element signature="method#main#0;class#FIleServer#0" expanded="false" />
             <element signature="class#HeartbeatListener#0" expanded="false" />
             <element signature="class#NodeAliveChecker#0" expanded="false" />
-            <element signature="class#ClientListener#0" expanded="false" />
-            <element signature="e#8001#8002#0" expanded="true" />
+            <element signature="method#ClientListener#0;class#ClientListener#0" expanded="false" />
+            <element signature="method#upload#0;class#ClientListener#0" expanded="false" />
+            <element signature="class#FileServerException#0" expanded="false" />
+            <element signature="e#8544#8545#0" expanded="true" />
+            <element signature="e#8570#8571#0" expanded="true" />
+            <element signature="class#FileOperationListener#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -847,11 +816,11 @@
         <state relative-caret-position="42">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
-            <element signature="e#1076#1077#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
           </folding>
         </state>
@@ -863,14 +832,17 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="method#init#0;class#FIleServer#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
             <element signature="method#main#0;class#FIleServer#0" expanded="false" />
             <element signature="class#HeartbeatListener#0" expanded="false" />
             <element signature="class#NodeAliveChecker#0" expanded="false" />
-            <element signature="class#ClientListener#0" expanded="false" />
-            <element signature="e#8001#8002#0" expanded="true" />
+            <element signature="method#ClientListener#0;class#ClientListener#0" expanded="false" />
+            <element signature="method#upload#0;class#ClientListener#0" expanded="false" />
+            <element signature="class#FileServerException#0" expanded="false" />
+            <element signature="e#8544#8545#0" expanded="true" />
+            <element signature="e#8570#8571#0" expanded="true" />
+            <element signature="class#FileOperationListener#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -888,11 +860,11 @@
         <state relative-caret-position="42">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
-            <element signature="e#1076#1077#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
           </folding>
         </state>
@@ -904,14 +876,17 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="method#init#0;class#FIleServer#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
             <element signature="method#main#0;class#FIleServer#0" expanded="false" />
             <element signature="class#HeartbeatListener#0" expanded="false" />
             <element signature="class#NodeAliveChecker#0" expanded="false" />
-            <element signature="class#ClientListener#0" expanded="false" />
-            <element signature="e#8001#8002#0" expanded="true" />
+            <element signature="method#ClientListener#0;class#ClientListener#0" expanded="false" />
+            <element signature="method#upload#0;class#ClientListener#0" expanded="false" />
+            <element signature="class#FileServerException#0" expanded="false" />
+            <element signature="e#8544#8545#0" expanded="true" />
+            <element signature="e#8570#8571#0" expanded="true" />
+            <element signature="class#FileOperationListener#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -929,11 +904,11 @@
         <state relative-caret-position="189">
           <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
           <folding>
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
-            <element signature="e#1076#1077#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
           </folding>
         </state>
@@ -945,14 +920,17 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="method#init#0;class#FIleServer#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
             <element signature="method#main#0;class#FIleServer#0" expanded="false" />
             <element signature="class#HeartbeatListener#0" expanded="false" />
             <element signature="class#NodeAliveChecker#0" expanded="false" />
-            <element signature="class#ClientListener#0" expanded="false" />
-            <element signature="e#8001#8002#0" expanded="true" />
+            <element signature="method#ClientListener#0;class#ClientListener#0" expanded="false" />
+            <element signature="method#upload#0;class#ClientListener#0" expanded="false" />
+            <element signature="class#FileServerException#0" expanded="false" />
+            <element signature="e#8544#8545#0" expanded="true" />
+            <element signature="e#8570#8571#0" expanded="true" />
+            <element signature="class#FileOperationListener#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -962,11 +940,11 @@
         <state relative-caret-position="189">
           <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
           <folding>
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
-            <element signature="e#1076#1077#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
           </folding>
         </state>
@@ -978,14 +956,17 @@
           <caret line="214" column="0" lean-forward="false" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="method#init#0;class#FIleServer#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
             <element signature="method#main#0;class#FIleServer#0" expanded="false" />
             <element signature="class#HeartbeatListener#0" expanded="false" />
             <element signature="class#NodeAliveChecker#0" expanded="false" />
-            <element signature="class#ClientListener#0" expanded="false" />
-            <element signature="e#8001#8002#0" expanded="true" />
+            <element signature="method#ClientListener#0;class#ClientListener#0" expanded="false" />
+            <element signature="method#upload#0;class#ClientListener#0" expanded="false" />
+            <element signature="class#FileServerException#0" expanded="false" />
+            <element signature="e#8544#8545#0" expanded="true" />
+            <element signature="e#8570#8571#0" expanded="true" />
+            <element signature="class#FileOperationListener#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -995,11 +976,11 @@
         <state relative-caret-position="189">
           <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
           <folding>
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
-            <element signature="e#1076#1077#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
           </folding>
         </state>
@@ -1019,14 +1000,17 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="method#init#0;class#FIleServer#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
             <element signature="method#main#0;class#FIleServer#0" expanded="false" />
             <element signature="class#HeartbeatListener#0" expanded="false" />
             <element signature="class#NodeAliveChecker#0" expanded="false" />
-            <element signature="class#ClientListener#0" expanded="false" />
-            <element signature="e#8001#8002#0" expanded="true" />
+            <element signature="method#ClientListener#0;class#ClientListener#0" expanded="false" />
+            <element signature="method#upload#0;class#ClientListener#0" expanded="false" />
+            <element signature="class#FileServerException#0" expanded="false" />
+            <element signature="e#8544#8545#0" expanded="true" />
+            <element signature="e#8570#8571#0" expanded="true" />
+            <element signature="class#FileOperationListener#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1044,11 +1028,11 @@
         <state relative-caret-position="189">
           <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
           <folding>
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
-            <element signature="e#1076#1077#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
           </folding>
         </state>
@@ -1060,14 +1044,17 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="method#init#0;class#FIleServer#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
             <element signature="method#main#0;class#FIleServer#0" expanded="false" />
             <element signature="class#HeartbeatListener#0" expanded="false" />
             <element signature="class#NodeAliveChecker#0" expanded="false" />
-            <element signature="class#ClientListener#0" expanded="false" />
-            <element signature="e#8001#8002#0" expanded="true" />
+            <element signature="method#ClientListener#0;class#ClientListener#0" expanded="false" />
+            <element signature="method#upload#0;class#ClientListener#0" expanded="false" />
+            <element signature="class#FileServerException#0" expanded="false" />
+            <element signature="e#8544#8545#0" expanded="true" />
+            <element signature="e#8570#8571#0" expanded="true" />
+            <element signature="class#FileOperationListener#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1077,11 +1064,11 @@
         <state relative-caret-position="546">
           <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
           <folding>
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
-            <element signature="e#1076#1077#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
           </folding>
         </state>
@@ -1093,14 +1080,17 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="method#init#0;class#FIleServer#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
             <element signature="method#main#0;class#FIleServer#0" expanded="false" />
             <element signature="class#HeartbeatListener#0" expanded="false" />
             <element signature="class#NodeAliveChecker#0" expanded="false" />
-            <element signature="class#ClientListener#0" expanded="false" />
-            <element signature="e#8001#8002#0" expanded="true" />
+            <element signature="method#ClientListener#0;class#ClientListener#0" expanded="false" />
+            <element signature="method#upload#0;class#ClientListener#0" expanded="false" />
+            <element signature="class#FileServerException#0" expanded="false" />
+            <element signature="e#8544#8545#0" expanded="true" />
+            <element signature="e#8570#8571#0" expanded="true" />
+            <element signature="class#FileOperationListener#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1110,11 +1100,11 @@
         <state relative-caret-position="126">
           <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="18" />
           <folding>
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
-            <element signature="e#1076#1077#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
           </folding>
         </state>
@@ -1126,14 +1116,17 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="method#init#0;class#FIleServer#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
             <element signature="method#main#0;class#FIleServer#0" expanded="false" />
             <element signature="class#HeartbeatListener#0" expanded="false" />
             <element signature="class#NodeAliveChecker#0" expanded="false" />
-            <element signature="class#ClientListener#0" expanded="false" />
-            <element signature="e#8001#8002#0" expanded="true" />
+            <element signature="method#ClientListener#0;class#ClientListener#0" expanded="false" />
+            <element signature="method#upload#0;class#ClientListener#0" expanded="false" />
+            <element signature="class#FileServerException#0" expanded="false" />
+            <element signature="e#8544#8545#0" expanded="true" />
+            <element signature="e#8570#8571#0" expanded="true" />
+            <element signature="class#FileOperationListener#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1144,14 +1137,17 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="method#init#0;class#FIleServer#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
             <element signature="method#main#0;class#FIleServer#0" expanded="false" />
             <element signature="class#HeartbeatListener#0" expanded="false" />
             <element signature="class#NodeAliveChecker#0" expanded="false" />
-            <element signature="class#ClientListener#0" expanded="false" />
-            <element signature="e#8001#8002#0" expanded="true" />
+            <element signature="method#ClientListener#0;class#ClientListener#0" expanded="false" />
+            <element signature="method#upload#0;class#ClientListener#0" expanded="false" />
+            <element signature="class#FileServerException#0" expanded="false" />
+            <element signature="e#8544#8545#0" expanded="true" />
+            <element signature="e#8570#8571#0" expanded="true" />
+            <element signature="class#FileOperationListener#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1162,14 +1158,17 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="method#init#0;class#FIleServer#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
             <element signature="method#main#0;class#FIleServer#0" expanded="false" />
             <element signature="class#HeartbeatListener#0" expanded="false" />
             <element signature="class#NodeAliveChecker#0" expanded="false" />
-            <element signature="class#ClientListener#0" expanded="false" />
-            <element signature="e#8001#8002#0" expanded="true" />
+            <element signature="method#ClientListener#0;class#ClientListener#0" expanded="false" />
+            <element signature="method#upload#0;class#ClientListener#0" expanded="false" />
+            <element signature="class#FileServerException#0" expanded="false" />
+            <element signature="e#8544#8545#0" expanded="true" />
+            <element signature="e#8570#8571#0" expanded="true" />
+            <element signature="class#FileOperationListener#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1180,14 +1179,17 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="method#init#0;class#FIleServer#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
             <element signature="method#main#0;class#FIleServer#0" expanded="false" />
             <element signature="class#HeartbeatListener#0" expanded="false" />
             <element signature="class#NodeAliveChecker#0" expanded="false" />
-            <element signature="class#ClientListener#0" expanded="false" />
-            <element signature="e#8001#8002#0" expanded="true" />
+            <element signature="method#ClientListener#0;class#ClientListener#0" expanded="false" />
+            <element signature="method#upload#0;class#ClientListener#0" expanded="false" />
+            <element signature="class#FileServerException#0" expanded="false" />
+            <element signature="e#8544#8545#0" expanded="true" />
+            <element signature="e#8570#8571#0" expanded="true" />
+            <element signature="class#FileOperationListener#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1198,14 +1200,17 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="method#init#0;class#FIleServer#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
             <element signature="method#main#0;class#FIleServer#0" expanded="false" />
             <element signature="class#HeartbeatListener#0" expanded="false" />
             <element signature="class#NodeAliveChecker#0" expanded="false" />
-            <element signature="class#ClientListener#0" expanded="false" />
-            <element signature="e#8001#8002#0" expanded="true" />
+            <element signature="method#ClientListener#0;class#ClientListener#0" expanded="false" />
+            <element signature="method#upload#0;class#ClientListener#0" expanded="false" />
+            <element signature="class#FileServerException#0" expanded="false" />
+            <element signature="e#8544#8545#0" expanded="true" />
+            <element signature="e#8570#8571#0" expanded="true" />
+            <element signature="class#FileOperationListener#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1216,14 +1221,17 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="method#init#0;class#FIleServer#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
             <element signature="method#main#0;class#FIleServer#0" expanded="false" />
             <element signature="class#HeartbeatListener#0" expanded="false" />
             <element signature="class#NodeAliveChecker#0" expanded="false" />
-            <element signature="class#ClientListener#0" expanded="false" />
-            <element signature="e#8001#8002#0" expanded="true" />
+            <element signature="method#ClientListener#0;class#ClientListener#0" expanded="false" />
+            <element signature="method#upload#0;class#ClientListener#0" expanded="false" />
+            <element signature="class#FileServerException#0" expanded="false" />
+            <element signature="e#8544#8545#0" expanded="true" />
+            <element signature="e#8570#8571#0" expanded="true" />
+            <element signature="class#FileOperationListener#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1234,14 +1242,17 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="method#init#0;class#FIleServer#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
             <element signature="method#main#0;class#FIleServer#0" expanded="false" />
             <element signature="class#HeartbeatListener#0" expanded="false" />
             <element signature="class#NodeAliveChecker#0" expanded="false" />
-            <element signature="class#ClientListener#0" expanded="false" />
-            <element signature="e#8001#8002#0" expanded="true" />
+            <element signature="method#ClientListener#0;class#ClientListener#0" expanded="false" />
+            <element signature="method#upload#0;class#ClientListener#0" expanded="false" />
+            <element signature="class#FileServerException#0" expanded="false" />
+            <element signature="e#8544#8545#0" expanded="true" />
+            <element signature="e#8570#8571#0" expanded="true" />
+            <element signature="class#FileOperationListener#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1252,14 +1263,17 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="method#init#0;class#FIleServer#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
             <element signature="method#main#0;class#FIleServer#0" expanded="false" />
             <element signature="class#HeartbeatListener#0" expanded="false" />
             <element signature="class#NodeAliveChecker#0" expanded="false" />
-            <element signature="class#ClientListener#0" expanded="false" />
-            <element signature="e#8001#8002#0" expanded="true" />
+            <element signature="method#ClientListener#0;class#ClientListener#0" expanded="false" />
+            <element signature="method#upload#0;class#ClientListener#0" expanded="false" />
+            <element signature="class#FileServerException#0" expanded="false" />
+            <element signature="e#8544#8545#0" expanded="true" />
+            <element signature="e#8570#8571#0" expanded="true" />
+            <element signature="class#FileOperationListener#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1325,13 +1339,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/output.txt" />
-    <entry file="file://$PROJECT_DIR$/FileInfo.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_121/src.zip!/java/net/ServerSocket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-693">
@@ -1374,15 +1381,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FileInfo.java">
+    <entry file="file://$PROJECT_DIR$/RegisteredNode.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="16" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RegisteredNode.txt">
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="599" column="6" lean-forward="false" selection-start-line="599" selection-start-column="6" selection-end-line="599" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileInfo.dat">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1392,33 +1407,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/StNodeInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="45" column="10" lean-forward="false" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
+        <state relative-caret-position="307">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
-            <element signature="e#1076#1077#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/FIleServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="213" column="43" lean-forward="false" selection-start-line="213" selection-start-column="43" selection-end-line="213" selection-end-column="43" />
+        <state relative-caret-position="223">
+          <caret line="191" column="0" lean-forward="false" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="method#init#0;class#FIleServer#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
             <element signature="method#main#0;class#FIleServer#0" expanded="false" />
             <element signature="class#HeartbeatListener#0" expanded="false" />
             <element signature="class#NodeAliveChecker#0" expanded="false" />
-            <element signature="class#ClientListener#0" expanded="false" />
-            <element signature="e#8001#8002#0" expanded="true" />
+            <element signature="method#ClientListener#0;class#ClientListener#0" expanded="false" />
+            <element signature="method#upload#0;class#ClientListener#0" expanded="false" />
+            <element signature="class#FileServerException#0" expanded="false" />
+            <element signature="e#8544#8545#0" expanded="true" />
+            <element signature="e#8570#8571#0" expanded="true" />
+            <element signature="class#FileOperationListener#0" expanded="false" />
           </folding>
         </state>
       </provider>

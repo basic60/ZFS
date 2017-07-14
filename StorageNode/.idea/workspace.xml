@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71307731-3aad-4ab7-8ac9-240f4cc13370" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../FileServer/RegisteredNode.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileClient/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FileClient/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileClient/src/FileClient.java" afterPath="$PROJECT_DIR$/../FileClient/src/FileClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileClient/test.txt" afterPath="$PROJECT_DIR$/../FileClient/test.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FileServer/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/src/FIleServer.java" afterPath="$PROJECT_DIR$/../FileServer/src/FIleServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/src/FileInfo.java" afterPath="$PROJECT_DIR$/../FileServer/src/FileInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/src/StNodeInfo.java" afterPath="$PROJECT_DIR$/../FileServer/src/StNodeInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Monitor/Monitor/MainWindow.xaml" afterPath="$PROJECT_DIR$/../Monitor/Monitor/MainWindow.xaml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StTest.java" afterPath="$PROJECT_DIR$/src/StTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StorageNode.java" afterPath="$PROJECT_DIR$/src/StorageNode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage1.properties" afterPath="$PROJECT_DIR$/storage1.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage2.properties" afterPath="$PROJECT_DIR$/storage2.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage3.properties" afterPath="$PROJECT_DIR$/storage3.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage4.properties" afterPath="$PROJECT_DIR$/storage4.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../FileServer/FileInfo.txt" afterPath="$PROJECT_DIR$/../FileServer/FileInfo.dat" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,24 +39,26 @@
       <file leaf-file-name="StorageNode.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/StorageNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="199" column="35" lean-forward="false" selection-start-line="199" selection-start-column="35" selection-end-line="199" selection-end-column="35" />
+            <state relative-caret-position="197">
+              <caret line="244" column="23" lean-forward="false" selection-start-line="244" selection-start-column="23" selection-end-line="244" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="class#StorageNode#0" expanded="false" />
                 <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
                 <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
                 <element signature="method#main#0;class#StorageNode#0" expanded="false" />
                 <element signature="class#Volume#0" expanded="false" />
-                <element signature="e#3537#3538#0" expanded="true" />
-                <element signature="e#3567#3568#0" expanded="true" />
-                <element signature="e#3654#3655#0" expanded="true" />
-                <element signature="e#3686#3687#0" expanded="true" />
+                <element signature="e#3571#3572#0" expanded="true" />
+                <element signature="e#3601#3602#0" expanded="true" />
+                <element signature="e#3628#3629#0" expanded="true" />
+                <element signature="e#3657#3658#0" expanded="true" />
+                <element signature="e#3688#3689#0" expanded="true" />
+                <element signature="e#3720#3721#0" expanded="true" />
                 <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
+                <element signature="method#notifyUploadFileSize#0;class#FileListener#0" expanded="false" />
                 <element signature="method#upload#0;class#FileListener#0" expanded="false" />
-                <element signature="method#run#0;class#FileListener#0" expanded="false" />
-                <element signature="e#8207#8208#0" expanded="true" />
-                <element signature="e#8234#8235#0" expanded="true" />
+                <element signature="method#forward#0;class#FileListener#0" expanded="false" />
+                <element signature="e#9361#9362#0" expanded="true" />
+                <element signature="e#9388#9389#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -152,42 +150,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="StorageNode" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StorageNode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StorageNode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StTest.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StorageNode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StorageNode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StorageNode.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -695,12 +657,12 @@
       <workItem from="1499847662408" duration="13053000" />
       <workItem from="1499911928216" duration="1212000" />
       <workItem from="1499916643895" duration="20385000" />
-      <workItem from="1499997650729" duration="15004000" />
+      <workItem from="1499997650729" duration="28352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112170000" />
+    <option name="totallyTimeSpent" value="125518000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -713,6 +675,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -729,7 +692,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27414164" sideWeight="0.4936508" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27414164" sideWeight="0.4936508" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -753,7 +716,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="47" />
+      <option name="time" value="48" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -768,20 +731,22 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#StorageNode#0" expanded="false" />
             <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
             <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="method#main#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
-            <element signature="e#3537#3538#0" expanded="true" />
-            <element signature="e#3567#3568#0" expanded="true" />
-            <element signature="e#3654#3655#0" expanded="true" />
-            <element signature="e#3686#3687#0" expanded="true" />
+            <element signature="e#3571#3572#0" expanded="true" />
+            <element signature="e#3601#3602#0" expanded="true" />
+            <element signature="e#3628#3629#0" expanded="true" />
+            <element signature="e#3657#3658#0" expanded="true" />
+            <element signature="e#3688#3689#0" expanded="true" />
+            <element signature="e#3720#3721#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
+            <element signature="method#notifyUploadFileSize#0;class#FileListener#0" expanded="false" />
             <element signature="method#upload#0;class#FileListener#0" expanded="false" />
-            <element signature="method#run#0;class#FileListener#0" expanded="false" />
-            <element signature="e#8207#8208#0" expanded="true" />
-            <element signature="e#8234#8235#0" expanded="true" />
+            <element signature="method#forward#0;class#FileListener#0" expanded="false" />
+            <element signature="e#9361#9362#0" expanded="true" />
+            <element signature="e#9388#9389#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -804,20 +769,22 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#StorageNode#0" expanded="false" />
             <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
             <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="method#main#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
-            <element signature="e#3537#3538#0" expanded="true" />
-            <element signature="e#3567#3568#0" expanded="true" />
-            <element signature="e#3654#3655#0" expanded="true" />
-            <element signature="e#3686#3687#0" expanded="true" />
+            <element signature="e#3571#3572#0" expanded="true" />
+            <element signature="e#3601#3602#0" expanded="true" />
+            <element signature="e#3628#3629#0" expanded="true" />
+            <element signature="e#3657#3658#0" expanded="true" />
+            <element signature="e#3688#3689#0" expanded="true" />
+            <element signature="e#3720#3721#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
+            <element signature="method#notifyUploadFileSize#0;class#FileListener#0" expanded="false" />
             <element signature="method#upload#0;class#FileListener#0" expanded="false" />
-            <element signature="method#run#0;class#FileListener#0" expanded="false" />
-            <element signature="e#8207#8208#0" expanded="true" />
-            <element signature="e#8234#8235#0" expanded="true" />
+            <element signature="method#forward#0;class#FileListener#0" expanded="false" />
+            <element signature="e#9361#9362#0" expanded="true" />
+            <element signature="e#9388#9389#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -828,20 +795,22 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#StorageNode#0" expanded="false" />
             <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
             <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="method#main#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
-            <element signature="e#3537#3538#0" expanded="true" />
-            <element signature="e#3567#3568#0" expanded="true" />
-            <element signature="e#3654#3655#0" expanded="true" />
-            <element signature="e#3686#3687#0" expanded="true" />
+            <element signature="e#3571#3572#0" expanded="true" />
+            <element signature="e#3601#3602#0" expanded="true" />
+            <element signature="e#3628#3629#0" expanded="true" />
+            <element signature="e#3657#3658#0" expanded="true" />
+            <element signature="e#3688#3689#0" expanded="true" />
+            <element signature="e#3720#3721#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
+            <element signature="method#notifyUploadFileSize#0;class#FileListener#0" expanded="false" />
             <element signature="method#upload#0;class#FileListener#0" expanded="false" />
-            <element signature="method#run#0;class#FileListener#0" expanded="false" />
-            <element signature="e#8207#8208#0" expanded="true" />
-            <element signature="e#8234#8235#0" expanded="true" />
+            <element signature="method#forward#0;class#FileListener#0" expanded="false" />
+            <element signature="e#9361#9362#0" expanded="true" />
+            <element signature="e#9388#9389#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -852,20 +821,22 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#StorageNode#0" expanded="false" />
             <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
             <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="method#main#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
-            <element signature="e#3537#3538#0" expanded="true" />
-            <element signature="e#3567#3568#0" expanded="true" />
-            <element signature="e#3654#3655#0" expanded="true" />
-            <element signature="e#3686#3687#0" expanded="true" />
+            <element signature="e#3571#3572#0" expanded="true" />
+            <element signature="e#3601#3602#0" expanded="true" />
+            <element signature="e#3628#3629#0" expanded="true" />
+            <element signature="e#3657#3658#0" expanded="true" />
+            <element signature="e#3688#3689#0" expanded="true" />
+            <element signature="e#3720#3721#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
+            <element signature="method#notifyUploadFileSize#0;class#FileListener#0" expanded="false" />
             <element signature="method#upload#0;class#FileListener#0" expanded="false" />
-            <element signature="method#run#0;class#FileListener#0" expanded="false" />
-            <element signature="e#8207#8208#0" expanded="true" />
-            <element signature="e#8234#8235#0" expanded="true" />
+            <element signature="method#forward#0;class#FileListener#0" expanded="false" />
+            <element signature="e#9361#9362#0" expanded="true" />
+            <element signature="e#9388#9389#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -895,20 +866,22 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#StorageNode#0" expanded="false" />
             <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
             <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="method#main#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
-            <element signature="e#3537#3538#0" expanded="true" />
-            <element signature="e#3567#3568#0" expanded="true" />
-            <element signature="e#3654#3655#0" expanded="true" />
-            <element signature="e#3686#3687#0" expanded="true" />
+            <element signature="e#3571#3572#0" expanded="true" />
+            <element signature="e#3601#3602#0" expanded="true" />
+            <element signature="e#3628#3629#0" expanded="true" />
+            <element signature="e#3657#3658#0" expanded="true" />
+            <element signature="e#3688#3689#0" expanded="true" />
+            <element signature="e#3720#3721#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
+            <element signature="method#notifyUploadFileSize#0;class#FileListener#0" expanded="false" />
             <element signature="method#upload#0;class#FileListener#0" expanded="false" />
-            <element signature="method#run#0;class#FileListener#0" expanded="false" />
-            <element signature="e#8207#8208#0" expanded="true" />
-            <element signature="e#8234#8235#0" expanded="true" />
+            <element signature="method#forward#0;class#FileListener#0" expanded="false" />
+            <element signature="e#9361#9362#0" expanded="true" />
+            <element signature="e#9388#9389#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -919,20 +892,22 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#StorageNode#0" expanded="false" />
             <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
             <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="method#main#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
-            <element signature="e#3537#3538#0" expanded="true" />
-            <element signature="e#3567#3568#0" expanded="true" />
-            <element signature="e#3654#3655#0" expanded="true" />
-            <element signature="e#3686#3687#0" expanded="true" />
+            <element signature="e#3571#3572#0" expanded="true" />
+            <element signature="e#3601#3602#0" expanded="true" />
+            <element signature="e#3628#3629#0" expanded="true" />
+            <element signature="e#3657#3658#0" expanded="true" />
+            <element signature="e#3688#3689#0" expanded="true" />
+            <element signature="e#3720#3721#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
+            <element signature="method#notifyUploadFileSize#0;class#FileListener#0" expanded="false" />
             <element signature="method#upload#0;class#FileListener#0" expanded="false" />
-            <element signature="method#run#0;class#FileListener#0" expanded="false" />
-            <element signature="e#8207#8208#0" expanded="true" />
-            <element signature="e#8234#8235#0" expanded="true" />
+            <element signature="method#forward#0;class#FileListener#0" expanded="false" />
+            <element signature="e#9361#9362#0" expanded="true" />
+            <element signature="e#9388#9389#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -943,51 +918,22 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#StorageNode#0" expanded="false" />
             <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
             <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="method#main#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
-            <element signature="e#3537#3538#0" expanded="true" />
-            <element signature="e#3567#3568#0" expanded="true" />
-            <element signature="e#3654#3655#0" expanded="true" />
-            <element signature="e#3686#3687#0" expanded="true" />
+            <element signature="e#3571#3572#0" expanded="true" />
+            <element signature="e#3601#3602#0" expanded="true" />
+            <element signature="e#3628#3629#0" expanded="true" />
+            <element signature="e#3657#3658#0" expanded="true" />
+            <element signature="e#3688#3689#0" expanded="true" />
+            <element signature="e#3720#3721#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
+            <element signature="method#notifyUploadFileSize#0;class#FileListener#0" expanded="false" />
             <element signature="method#upload#0;class#FileListener#0" expanded="false" />
-            <element signature="method#run#0;class#FileListener#0" expanded="false" />
-            <element signature="e#8207#8208#0" expanded="true" />
-            <element signature="e#8234#8235#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage1.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StorageNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#StorageNode#0" expanded="false" />
-            <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
-            <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
-            <element signature="method#main#0;class#StorageNode#0" expanded="false" />
-            <element signature="class#Volume#0" expanded="false" />
-            <element signature="e#3537#3538#0" expanded="true" />
-            <element signature="e#3567#3568#0" expanded="true" />
-            <element signature="e#3654#3655#0" expanded="true" />
-            <element signature="e#3686#3687#0" expanded="true" />
-            <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
-            <element signature="method#upload#0;class#FileListener#0" expanded="false" />
-            <element signature="method#run#0;class#FileListener#0" expanded="false" />
-            <element signature="e#8207#8208#0" expanded="true" />
-            <element signature="e#8234#8235#0" expanded="true" />
+            <element signature="method#forward#0;class#FileListener#0" expanded="false" />
+            <element signature="e#9361#9362#0" expanded="true" />
+            <element signature="e#9388#9389#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1005,20 +951,22 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#StorageNode#0" expanded="false" />
             <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
             <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="method#main#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
-            <element signature="e#3537#3538#0" expanded="true" />
-            <element signature="e#3567#3568#0" expanded="true" />
-            <element signature="e#3654#3655#0" expanded="true" />
-            <element signature="e#3686#3687#0" expanded="true" />
+            <element signature="e#3571#3572#0" expanded="true" />
+            <element signature="e#3601#3602#0" expanded="true" />
+            <element signature="e#3628#3629#0" expanded="true" />
+            <element signature="e#3657#3658#0" expanded="true" />
+            <element signature="e#3688#3689#0" expanded="true" />
+            <element signature="e#3720#3721#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
+            <element signature="method#notifyUploadFileSize#0;class#FileListener#0" expanded="false" />
             <element signature="method#upload#0;class#FileListener#0" expanded="false" />
-            <element signature="method#run#0;class#FileListener#0" expanded="false" />
-            <element signature="e#8207#8208#0" expanded="true" />
-            <element signature="e#8234#8235#0" expanded="true" />
+            <element signature="method#forward#0;class#FileListener#0" expanded="false" />
+            <element signature="e#9361#9362#0" expanded="true" />
+            <element signature="e#9388#9389#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1036,20 +984,22 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#StorageNode#0" expanded="false" />
             <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
             <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="method#main#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
-            <element signature="e#3537#3538#0" expanded="true" />
-            <element signature="e#3567#3568#0" expanded="true" />
-            <element signature="e#3654#3655#0" expanded="true" />
-            <element signature="e#3686#3687#0" expanded="true" />
+            <element signature="e#3571#3572#0" expanded="true" />
+            <element signature="e#3601#3602#0" expanded="true" />
+            <element signature="e#3628#3629#0" expanded="true" />
+            <element signature="e#3657#3658#0" expanded="true" />
+            <element signature="e#3688#3689#0" expanded="true" />
+            <element signature="e#3720#3721#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
+            <element signature="method#notifyUploadFileSize#0;class#FileListener#0" expanded="false" />
             <element signature="method#upload#0;class#FileListener#0" expanded="false" />
-            <element signature="method#run#0;class#FileListener#0" expanded="false" />
-            <element signature="e#8207#8208#0" expanded="true" />
-            <element signature="e#8234#8235#0" expanded="true" />
+            <element signature="method#forward#0;class#FileListener#0" expanded="false" />
+            <element signature="e#9361#9362#0" expanded="true" />
+            <element signature="e#9388#9389#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1067,20 +1017,55 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#StorageNode#0" expanded="false" />
             <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
             <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="method#main#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
-            <element signature="e#3537#3538#0" expanded="true" />
-            <element signature="e#3567#3568#0" expanded="true" />
-            <element signature="e#3654#3655#0" expanded="true" />
-            <element signature="e#3686#3687#0" expanded="true" />
+            <element signature="e#3571#3572#0" expanded="true" />
+            <element signature="e#3601#3602#0" expanded="true" />
+            <element signature="e#3628#3629#0" expanded="true" />
+            <element signature="e#3657#3658#0" expanded="true" />
+            <element signature="e#3688#3689#0" expanded="true" />
+            <element signature="e#3720#3721#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
+            <element signature="method#notifyUploadFileSize#0;class#FileListener#0" expanded="false" />
             <element signature="method#upload#0;class#FileListener#0" expanded="false" />
-            <element signature="method#run#0;class#FileListener#0" expanded="false" />
-            <element signature="e#8207#8208#0" expanded="true" />
-            <element signature="e#8234#8235#0" expanded="true" />
+            <element signature="method#forward#0;class#FileListener#0" expanded="false" />
+            <element signature="e#9361#9362#0" expanded="true" />
+            <element signature="e#9388#9389#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage1.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StorageNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#main#0;class#StorageNode#0" expanded="false" />
+            <element signature="class#Volume#0" expanded="false" />
+            <element signature="e#3571#3572#0" expanded="true" />
+            <element signature="e#3601#3602#0" expanded="true" />
+            <element signature="e#3628#3629#0" expanded="true" />
+            <element signature="e#3657#3658#0" expanded="true" />
+            <element signature="e#3688#3689#0" expanded="true" />
+            <element signature="e#3720#3721#0" expanded="true" />
+            <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
+            <element signature="method#notifyUploadFileSize#0;class#FileListener#0" expanded="false" />
+            <element signature="method#upload#0;class#FileListener#0" expanded="false" />
+            <element signature="method#forward#0;class#FileListener#0" expanded="false" />
+            <element signature="e#9361#9362#0" expanded="true" />
+            <element signature="e#9388#9389#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1098,20 +1083,22 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#StorageNode#0" expanded="false" />
             <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
             <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="method#main#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
-            <element signature="e#3537#3538#0" expanded="true" />
-            <element signature="e#3567#3568#0" expanded="true" />
-            <element signature="e#3654#3655#0" expanded="true" />
-            <element signature="e#3686#3687#0" expanded="true" />
+            <element signature="e#3571#3572#0" expanded="true" />
+            <element signature="e#3601#3602#0" expanded="true" />
+            <element signature="e#3628#3629#0" expanded="true" />
+            <element signature="e#3657#3658#0" expanded="true" />
+            <element signature="e#3688#3689#0" expanded="true" />
+            <element signature="e#3720#3721#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
+            <element signature="method#notifyUploadFileSize#0;class#FileListener#0" expanded="false" />
             <element signature="method#upload#0;class#FileListener#0" expanded="false" />
-            <element signature="method#run#0;class#FileListener#0" expanded="false" />
-            <element signature="e#8207#8208#0" expanded="true" />
-            <element signature="e#8234#8235#0" expanded="true" />
+            <element signature="method#forward#0;class#FileListener#0" expanded="false" />
+            <element signature="e#9361#9362#0" expanded="true" />
+            <element signature="e#9388#9389#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1129,20 +1116,22 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#StorageNode#0" expanded="false" />
             <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
             <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="method#main#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
-            <element signature="e#3537#3538#0" expanded="true" />
-            <element signature="e#3567#3568#0" expanded="true" />
-            <element signature="e#3654#3655#0" expanded="true" />
-            <element signature="e#3686#3687#0" expanded="true" />
+            <element signature="e#3571#3572#0" expanded="true" />
+            <element signature="e#3601#3602#0" expanded="true" />
+            <element signature="e#3628#3629#0" expanded="true" />
+            <element signature="e#3657#3658#0" expanded="true" />
+            <element signature="e#3688#3689#0" expanded="true" />
+            <element signature="e#3720#3721#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
+            <element signature="method#notifyUploadFileSize#0;class#FileListener#0" expanded="false" />
             <element signature="method#upload#0;class#FileListener#0" expanded="false" />
-            <element signature="method#run#0;class#FileListener#0" expanded="false" />
-            <element signature="e#8207#8208#0" expanded="true" />
-            <element signature="e#8234#8235#0" expanded="true" />
+            <element signature="method#forward#0;class#FileListener#0" expanded="false" />
+            <element signature="e#9361#9362#0" expanded="true" />
+            <element signature="e#9388#9389#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1160,20 +1149,22 @@
           <caret line="40" column="43" lean-forward="true" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#StorageNode#0" expanded="false" />
             <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
             <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="method#main#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
-            <element signature="e#3537#3538#0" expanded="true" />
-            <element signature="e#3567#3568#0" expanded="true" />
-            <element signature="e#3654#3655#0" expanded="true" />
-            <element signature="e#3686#3687#0" expanded="true" />
+            <element signature="e#3571#3572#0" expanded="true" />
+            <element signature="e#3601#3602#0" expanded="true" />
+            <element signature="e#3628#3629#0" expanded="true" />
+            <element signature="e#3657#3658#0" expanded="true" />
+            <element signature="e#3688#3689#0" expanded="true" />
+            <element signature="e#3720#3721#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
+            <element signature="method#notifyUploadFileSize#0;class#FileListener#0" expanded="false" />
             <element signature="method#upload#0;class#FileListener#0" expanded="false" />
-            <element signature="method#run#0;class#FileListener#0" expanded="false" />
-            <element signature="e#8207#8208#0" expanded="true" />
-            <element signature="e#8234#8235#0" expanded="true" />
+            <element signature="method#forward#0;class#FileListener#0" expanded="false" />
+            <element signature="e#9361#9362#0" expanded="true" />
+            <element signature="e#9388#9389#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1199,20 +1190,22 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#StorageNode#0" expanded="false" />
             <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
             <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="method#main#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
-            <element signature="e#3537#3538#0" expanded="true" />
-            <element signature="e#3567#3568#0" expanded="true" />
-            <element signature="e#3654#3655#0" expanded="true" />
-            <element signature="e#3686#3687#0" expanded="true" />
+            <element signature="e#3571#3572#0" expanded="true" />
+            <element signature="e#3601#3602#0" expanded="true" />
+            <element signature="e#3628#3629#0" expanded="true" />
+            <element signature="e#3657#3658#0" expanded="true" />
+            <element signature="e#3688#3689#0" expanded="true" />
+            <element signature="e#3720#3721#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
+            <element signature="method#notifyUploadFileSize#0;class#FileListener#0" expanded="false" />
             <element signature="method#upload#0;class#FileListener#0" expanded="false" />
-            <element signature="method#run#0;class#FileListener#0" expanded="false" />
-            <element signature="e#8207#8208#0" expanded="true" />
-            <element signature="e#8234#8235#0" expanded="true" />
+            <element signature="method#forward#0;class#FileListener#0" expanded="false" />
+            <element signature="e#9361#9362#0" expanded="true" />
+            <element signature="e#9388#9389#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1230,20 +1223,22 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#StorageNode#0" expanded="false" />
             <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
             <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="method#main#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
-            <element signature="e#3537#3538#0" expanded="true" />
-            <element signature="e#3567#3568#0" expanded="true" />
-            <element signature="e#3654#3655#0" expanded="true" />
-            <element signature="e#3686#3687#0" expanded="true" />
+            <element signature="e#3571#3572#0" expanded="true" />
+            <element signature="e#3601#3602#0" expanded="true" />
+            <element signature="e#3628#3629#0" expanded="true" />
+            <element signature="e#3657#3658#0" expanded="true" />
+            <element signature="e#3688#3689#0" expanded="true" />
+            <element signature="e#3720#3721#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
+            <element signature="method#notifyUploadFileSize#0;class#FileListener#0" expanded="false" />
             <element signature="method#upload#0;class#FileListener#0" expanded="false" />
-            <element signature="method#run#0;class#FileListener#0" expanded="false" />
-            <element signature="e#8207#8208#0" expanded="true" />
-            <element signature="e#8234#8235#0" expanded="true" />
+            <element signature="method#forward#0;class#FileListener#0" expanded="false" />
+            <element signature="e#9361#9362#0" expanded="true" />
+            <element signature="e#9388#9389#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1332,34 +1327,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storage2.properties">
+    <entry file="file://$PROJECT_DIR$/Node3/b25cdfb2-e961-48ab-a529-a113cdac6416">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage4.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage1.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage3.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1375,34 +1346,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Node3/b25cdfb2-e961-48ab-a529-a113cdac6416">
+    <entry file="file://$PROJECT_DIR$/storage4.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="84">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage3.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage2.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage1.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/StorageNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="199" column="35" lean-forward="false" selection-start-line="199" selection-start-column="35" selection-end-line="199" selection-end-column="35" />
+        <state relative-caret-position="197">
+          <caret line="244" column="23" lean-forward="false" selection-start-line="244" selection-start-column="23" selection-end-line="244" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#StorageNode#0" expanded="false" />
             <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
             <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="method#main#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
-            <element signature="e#3537#3538#0" expanded="true" />
-            <element signature="e#3567#3568#0" expanded="true" />
-            <element signature="e#3654#3655#0" expanded="true" />
-            <element signature="e#3686#3687#0" expanded="true" />
+            <element signature="e#3571#3572#0" expanded="true" />
+            <element signature="e#3601#3602#0" expanded="true" />
+            <element signature="e#3628#3629#0" expanded="true" />
+            <element signature="e#3657#3658#0" expanded="true" />
+            <element signature="e#3688#3689#0" expanded="true" />
+            <element signature="e#3720#3721#0" expanded="true" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
+            <element signature="method#notifyUploadFileSize#0;class#FileListener#0" expanded="false" />
             <element signature="method#upload#0;class#FileListener#0" expanded="false" />
-            <element signature="method#run#0;class#FileListener#0" expanded="false" />
-            <element signature="e#8207#8208#0" expanded="true" />
-            <element signature="e#8234#8235#0" expanded="true" />
+            <element signature="method#forward#0;class#FileListener#0" expanded="false" />
+            <element signature="e#9361#9362#0" expanded="true" />
+            <element signature="e#9388#9389#0" expanded="true" />
           </folding>
         </state>
       </provider>

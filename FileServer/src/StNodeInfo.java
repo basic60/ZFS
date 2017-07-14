@@ -5,7 +5,6 @@ public class StNodeInfo implements Comparable{
     String nodeIP;
     int nodePort;
     Volume volume;
-    String uuid;
     long lastVis;
     public StNodeInfo(){}
     public StNodeInfo(String name,String ip,int port,long tot,long avi){
@@ -47,7 +46,7 @@ class Volume implements Comparable{
         available=val;
     }
 
-    public long getAvailalblebytes(){
+    public long getAvailableBytes(){
         return available;
     }
 

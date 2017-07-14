@@ -1,5 +1,9 @@
+import sun.security.krb5.internal.KdcErrException;
+
+import javax.annotation.processing.SupportedSourceVersion;
 import javax.crypto.*;
 import javax.crypto.spec.SecretKeySpec;
+import javax.net.ssl.SSLContext;
 import java.io.*;
 import java.math.BigInteger;
 import java.net.Socket;
@@ -7,7 +11,9 @@ import java.security.InvalidKeyException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
+import java.sql.SQLSyntaxErrorException;
 import java.util.ArrayList;
+import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
 public class FileClient {
@@ -15,6 +21,9 @@ public class FileClient {
     private static final int FILE_SERVER_PORT=30002;
     private static Socket socket=null;
     private static final String passwd="askjhKAHLKLakj329453=43564871cs2d234g*/*/6/'";
+    private static final int ENCRYPT=1;
+    private static final int DECRYPT=2;
+    private static final String ROOT_DIR="d:\\zzh";
 
     //Calculate the md5 of the file.
     static String getMD5(String fpath) {
@@ -56,7 +65,7 @@ public class FileClient {
         String nodeMain;
         String uuid;
         PrintStream out;
-        while (true) try {
+        try {
             File tmp = new File(fpath);
             String fname = tmp.getName();
             long flen = tmp.length();
@@ -65,6 +74,7 @@ public class FileClient {
             System.out.printf("The MD5 of this file is: %s\n", md5Value);
             out = new PrintStream(socket.getOutputStream());
 
+            out.println("upload");
             out.println(md5Value);
             out.println(fname);
             out.println(flen);
@@ -108,7 +118,7 @@ public class FileClient {
                 fdata[cnt++]=(byte) val;
                 if(cnt==1024)
                 {
-                    fdata = aesEncrypt(fdata);
+                    fdata = aes(fdata,ENCRYPT);
                     bout.write(fdata, 0, cnt);
                     bout.flush();
                     cnt=0;
@@ -122,18 +132,78 @@ public class FileClient {
             bout.close();
             out.close();
             socket.close();
-            break;
         } catch (IOException e) {
             System.out.println(e.getMessage());
             Thread.sleep(3000);
         }
     }
 
-    static void download(String uuid){
+    static void download(String uuid) {
         try {
+            //Get where the file is stored on which storage node.
+            PrintWriter out = new PrintWriter(socket.getOutputStream());
+            out.write("download\n");
+            out.write(uuid+"\n");
+            out.flush();
+            BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+
+            String fileName=br.readLine();
+            out.close();
+            br.close();
             socket.close();
+
+            //Download from the storage node.
+            if(fileName.equals("null")){
+                System.out.println("Such file doesn't exist!");
+                return;
+            }
+            else {
+                int id=0;
+                String mainNode=br.readLine();
+                String backupNode=br.readLine();
+                while (id++<2){
+                    String ip=id==1?mainNode.split(" ")[0]:backupNode.split(" ")[0];
+                    int port=id==1?Integer.parseInt(mainNode.split(" ")[1]):Integer.parseInt(backupNode.split(" ")[1]);
+                    try{
+                        Socket socket=new Socket(ip,port);
+                        socket.setSoTimeout(5000);
+                        out=new PrintWriter(socket.getOutputStream());
+                        out.println("download");
+                        out.println(uuid);
+
+                        //Start download the file.
+                        OutputStream os = new FileOutputStream(new File(ROOT_DIR,fileName));
+                        BufferedInputStream bin = new BufferedInputStream(new GZIPInputStream(socket.getInputStream()));
+                        int cnt=0;int tot=0;int val;byte[] fdata=new byte[1024];
+                        while ((val=bin.read())!=-1){
+                            tot++;
+                            fdata[cnt++]=(byte) val;
+                            if(cnt==1024){
+                                byte[] res=aes(fdata,DECRYPT);
+                                os.write(fdata,0,cnt);
+                                os.flush();
+                                cnt=0;
+                            }
+                        }
+                        if(cnt>0)
+                            os.write(fdata,0,cnt);
+                        os.flush();
+                        os.close();
+                        socket.close();
+                        bin.close();
+                        System.out.printf(">>Download file finished.Total %d bytes.\n",tot);
+                        System.out.printf(">>Store at %s\\%s\n",ROOT_DIR,fileName);
+                        break;
+                    }
+                    catch (IOException e){
+                        System.out.println(e.getMessage());
+                    }
+                }
+                if(id==3)
+                    System.out.println("Download failed!Please retry after some periods.");
+            }
         } catch (IOException e) {
-            e.printStackTrace();
+           System.out.println(e.getMessage());
         }
     }
 
@@ -158,6 +228,7 @@ public class FileClient {
             System.out.printf("Trying connecting to the server %s:%d\n",FILE_SERVER_IP,FILE_SERVER_PORT);
             try {
                 socket=new Socket(FILE_SERVER_IP,FILE_SERVER_PORT);
+                socket.setSoTimeout(5000);
                 System.out.println("Connecting to the server successfully!");
                 break;
             } catch (IOException e) {
@@ -172,7 +243,7 @@ public class FileClient {
         }
     }
 
-    static byte[] aesEncrypt(byte[] content){
+    static byte[] aes(byte[] content,int mode){
         try {
             KeyGenerator keygen=KeyGenerator.getInstance("AES");
             keygen.init(128,new SecureRandom(passwd.getBytes()));
@@ -181,7 +252,10 @@ public class FileClient {
             SecretKey key=new SecretKeySpec(encode,"AES");
 
             Cipher cipher=Cipher.getInstance("AES");
-            cipher.init(Cipher.ENCRYPT_MODE,key);
+            if(mode==1)
+                cipher.init(Cipher.ENCRYPT_MODE,key);
+            else
+                cipher.init(Cipher.DECRYPT_MODE, key);
             byte[] result=cipher.doFinal(content);
             return result;
         }
