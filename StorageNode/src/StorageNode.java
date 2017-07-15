@@ -241,10 +241,22 @@ class FileListener implements Runnable {
 
     void download(String uuid){
         try {
+
             FileInputStream fin=new FileInputStream(new File(rootDir,uuid));
-            Socket soc=
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            BufferedOutputStream out=new BufferedOutputStream(soc.getOutputStream());
+            int tmp;long cnt=0;
+            System.out.printf("[%s-download] Start send file %s\n",nodeName,uuid);
+            while ((tmp=fin.read())!=-1){
+                cnt++;
+                out.write(tmp);
+                if(cnt%2048==0)
+                    out.flush();
+            }
+            out.flush();
+            out.close();
+            System.out.printf("[%s-download] Send file finished. Total %d bytes.\n",nodeName,cnt);
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
     }
 
