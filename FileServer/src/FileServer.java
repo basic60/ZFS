@@ -10,9 +10,24 @@ public class FileServer {
     static final int SERVER_CLIENT_PORT=30002;
     static final int SERVER_FILEOP_PORT=30003;
     static final String SERVER_IP="127.0.0.1";
-    static final Map <String,String> registeredStNode=new HashMap<>();
+
+    static void writeTryingDeletingFile() {
+        try {
+            FileWriter fw = new FileWriter("TryDelete.dat");
+            for (String i : FileServer.deleteFile) {
+                fw.write(i + "\n");
+            }
+            fw.flush();
+            fw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     static final List<StNodeInfo> stNodeList=new ArrayList<>();
     static List<FileInfo> fileList;
+
+    //Format: uuid'\n'ip port
     static final List<String> deleteFile=new ArrayList<>();
 
     private List<Runnable> taskList;
@@ -26,7 +41,19 @@ public class FileServer {
             ObjectInputStream ism=new ObjectInputStream(new FileInputStream("FileInfo.dat"));
             fileList=(List<FileInfo>)ism.readObject();
             if(fileList!=null){
-                System.out.println("Load file info completely");
+                System.out.println("[init] Load file info completely");
+            }
+            ism.close();
+
+            //Read the try deleting list.
+            BufferedReader fin=new BufferedReader(new FileReader("TryDelete.dat"));
+            String uuid;StringBuilder sb=new StringBuilder();
+            while ((uuid=fin.readLine())!=null){
+                sb.append(uuid);sb.append('\n');sb.append(fin.readLine());
+                deleteFile.add(sb.toString());
+                System.out.printf("[init] file %s at node %s is added to the deleted trying list.\n",
+                        sb.toString().split("\n")[0],sb.toString().split("\n")[1]);
+                sb=new StringBuilder();
             }
         }
         catch (IOException | ClassNotFoundException e){
@@ -211,6 +238,7 @@ class ClientListener implements Runnable {
     }
 
     //Add the file to the delete trying list.
+
     private void  delete(){
         try{
             String uuid=br.readLine();
@@ -225,6 +253,7 @@ class ClientListener implements Runnable {
                         break;
                     }
                 }
+                FileServer.writeTryingDeletingFile();
             }
 
             BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(os));
@@ -330,6 +359,7 @@ class FileOperationListener implements Runnable{
                         }
                         if(id!=-1)
                             FileServer.deleteFile.remove(id);
+                        FileServer.writeTryingDeletingFile();
                     }
                 }
                 writeFileInfo();

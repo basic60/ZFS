@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71307731-3aad-4ab7-8ac9-240f4cc13370" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage5.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileClient/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FileClient/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileClient/src/FileClient.java" afterPath="$PROJECT_DIR$/../FileClient/src/FileClient.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FileServer/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/src/FileServer.java" afterPath="$PROJECT_DIR$/../FileServer/src/FileServer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StTest.java" afterPath="$PROJECT_DIR$/src/StTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StorageNode.java" afterPath="$PROJECT_DIR$/src/StorageNode.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../FileServer/src/FIleServer.java" afterPath="$PROJECT_DIR$/../FileServer/src/FileServer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +33,8 @@
       <file leaf-file-name="StorageNode.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/StorageNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="308" column="113" lean-forward="false" selection-start-line="308" selection-start-column="113" selection-end-line="308" selection-end-column="113" />
+            <state relative-caret-position="434">
+              <caret line="309" column="36" lean-forward="true" selection-start-line="309" selection-start-column="36" selection-end-line="309" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="class#StorageNode#0" expanded="false" />
@@ -616,12 +612,12 @@
       <workItem from="1500082955176" duration="8869000" />
       <workItem from="1500099908581" duration="4066000" />
       <workItem from="1500104987530" duration="20140000" />
-      <workItem from="1500169972769" duration="2354000" />
+      <workItem from="1500169972769" duration="3819000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161253000" />
+    <option name="totallyTimeSpent" value="162718000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -651,7 +647,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19688842" sideWeight="0.4936508" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19688842" sideWeight="0.4936508" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1327,8 +1323,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/StorageNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="308" column="113" lean-forward="false" selection-start-line="308" selection-start-column="113" selection-end-line="308" selection-end-column="113" />
+        <state relative-caret-position="434">
+          <caret line="309" column="36" lean-forward="true" selection-start-line="309" selection-start-column="36" selection-end-line="309" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="class#StorageNode#0" expanded="false" />
