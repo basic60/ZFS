@@ -355,7 +355,7 @@ class RegisterAndUpdate implements Runnable{
                 DatagramSocket dc=new DatagramSocket();
                 dc.send(dp);
                 dc.close();
-               // System.out.printf("[%s-Update] Update volume and send heart beat packet.\n",node.nodeName);
+              //  System.out.printf("[%s-Update] Update volume and send heart beat packet.\n",node.nodeName);
                 Thread.sleep(5000);
             } catch (InterruptedException | IOException e) {
                 System.out.println(e.getMessage());

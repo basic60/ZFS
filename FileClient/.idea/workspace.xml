@@ -4,8 +4,17 @@
     <list default="true" id="4f025984-9216-4556-9aeb-73fed2d66a0e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FileServer/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/src/ClientListener.java" afterPath="$PROJECT_DIR$/../FileServer/src/ClientListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/src/FileInfo.java" afterPath="$PROJECT_DIR$/../FileServer/src/FileInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/src/FileServer.java" afterPath="$PROJECT_DIR$/../FileServer/src/FileServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/src/GUIFileNotifier.java" afterPath="$PROJECT_DIR$/../FileServer/src/GUIFileNotifier.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/src/GUIStorageNodeNotifier.java" afterPath="$PROJECT_DIR$/../FileServer/src/GUIStorageNodeNotifier.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Monitor/Monitor/App.xaml" afterPath="$PROJECT_DIR$/../Monitor/Monitor/App.xaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Monitor/Monitor/MainWindow.xaml" afterPath="$PROJECT_DIR$/../Monitor/Monitor/MainWindow.xaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Monitor/Monitor/MainWindow.xaml.cs" afterPath="$PROJECT_DIR$/../Monitor/Monitor/MainWindow.xaml.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Monitor/Monitor/Monitor.csproj" afterPath="$PROJECT_DIR$/../Monitor/Monitor/Monitor.csproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../StorageNode/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StorageNode/src/StorageNode.java" afterPath="$PROJECT_DIR$/../StorageNode/src/StorageNode.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,28 +39,18 @@
       <file leaf-file-name="FileClient.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FileClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="252" column="9" lean-forward="true" selection-start-line="252" selection-start-column="9" selection-end-line="252" selection-end-column="9" />
+            <state relative-caret-position="88">
+              <caret line="255" column="25" lean-forward="true" selection-start-line="255" selection-start-column="25" selection-end-line="255" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
                 <element signature="method#upload#0;class#FileClient#0" expanded="false" />
                 <element signature="method#download#0;class#FileClient#0" expanded="false" />
-                <element signature="method#connect#0;class#FileClient#0" expanded="false" />
+                <element signature="method#delete#0;class#FileClient#0" expanded="false" />
                 <element signature="method#generateKey#0;class#FileClient#0" expanded="false" />
                 <element signature="method#aes#0;class#FileClient#0" expanded="false" />
                 <element signature="method#main#0;class#FileClient#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -117,6 +116,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -145,15 +146,13 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FileServer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../StorageNode" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -565,7 +564,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="FileClient" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="delete 34e27107-0a57-4fc1-9daa-d5571f904113" />
+      <option name="PROGRAM_PARAMETERS" value="upload 1.jpg" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -606,12 +605,13 @@
       <workItem from="1500082878517" duration="12700000" />
       <workItem from="1500099930261" duration="4494000" />
       <workItem from="1500105234775" duration="15159000" />
-      <workItem from="1500169553795" duration="5004000" />
+      <workItem from="1500169553795" duration="5503000" />
+      <workItem from="1500208796947" duration="4380000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139645000" />
+    <option name="totallyTimeSpent" value="144524000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -626,20 +626,20 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20654507" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15182403" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997735" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3997735" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -674,7 +674,7 @@
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
-            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
+            <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#generateKey#0;class#FileClient#0" expanded="false" />
             <element signature="method#aes#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
@@ -699,7 +699,32 @@
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
-            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
+            <element signature="method#delete#0;class#FileClient#0" expanded="false" />
+            <element signature="method#generateKey#0;class#FileClient#0" expanded="false" />
+            <element signature="method#aes#0;class#FileClient#0" expanded="false" />
+            <element signature="method#main#0;class#FileClient#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
+            <element signature="method#upload#0;class#FileClient#0" expanded="false" />
+            <element signature="method#download#0;class#FileClient#0" expanded="false" />
+            <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#generateKey#0;class#FileClient#0" expanded="false" />
             <element signature="method#aes#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
@@ -716,7 +741,7 @@
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
-            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
+            <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#generateKey#0;class#FileClient#0" expanded="false" />
             <element signature="method#aes#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
@@ -733,7 +758,7 @@
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
-            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
+            <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#generateKey#0;class#FileClient#0" expanded="false" />
             <element signature="method#aes#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
@@ -757,7 +782,7 @@
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
-            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
+            <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#generateKey#0;class#FileClient#0" expanded="false" />
             <element signature="method#aes#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
@@ -774,7 +799,7 @@
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
-            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
+            <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#generateKey#0;class#FileClient#0" expanded="false" />
             <element signature="method#aes#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
@@ -791,7 +816,7 @@
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
-            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
+            <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#generateKey#0;class#FileClient#0" expanded="false" />
             <element signature="method#aes#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
@@ -808,7 +833,7 @@
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
-            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
+            <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#generateKey#0;class#FileClient#0" expanded="false" />
             <element signature="method#aes#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
@@ -825,7 +850,7 @@
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
-            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
+            <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#generateKey#0;class#FileClient#0" expanded="false" />
             <element signature="method#aes#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
@@ -849,7 +874,7 @@
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
-            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
+            <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#generateKey#0;class#FileClient#0" expanded="false" />
             <element signature="method#aes#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
@@ -873,7 +898,7 @@
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
-            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
+            <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#generateKey#0;class#FileClient#0" expanded="false" />
             <element signature="method#aes#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
@@ -890,7 +915,7 @@
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
-            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
+            <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#generateKey#0;class#FileClient#0" expanded="false" />
             <element signature="method#aes#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
@@ -907,7 +932,7 @@
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
-            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
+            <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#generateKey#0;class#FileClient#0" expanded="false" />
             <element signature="method#aes#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
@@ -924,7 +949,7 @@
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
-            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
+            <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#generateKey#0;class#FileClient#0" expanded="false" />
             <element signature="method#aes#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
@@ -941,7 +966,7 @@
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
-            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
+            <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#generateKey#0;class#FileClient#0" expanded="false" />
             <element signature="method#aes#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />
@@ -1038,22 +1063,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        <state relative-caret-position="147">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FileClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="252" column="9" lean-forward="true" selection-start-line="252" selection-start-column="9" selection-end-line="252" selection-end-column="9" />
+        <state relative-caret-position="88">
+          <caret line="255" column="25" lean-forward="true" selection-start-line="255" selection-start-column="25" selection-end-line="255" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getMD5#0;class#FileClient#0" expanded="false" />
             <element signature="method#upload#0;class#FileClient#0" expanded="false" />
             <element signature="method#download#0;class#FileClient#0" expanded="false" />
-            <element signature="method#connect#0;class#FileClient#0" expanded="false" />
+            <element signature="method#delete#0;class#FileClient#0" expanded="false" />
             <element signature="method#generateKey#0;class#FileClient#0" expanded="false" />
             <element signature="method#aes#0;class#FileClient#0" expanded="false" />
             <element signature="method#main#0;class#FileClient#0" expanded="false" />

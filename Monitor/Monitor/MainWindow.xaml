@@ -3,13 +3,36 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:md="clr-namespace:UIBlocks.MaterialDesignTheme;assembly=UIBlocks.MaterialDesignTheme"
         xmlns:local="clr-namespace:Monitor"
         mc:Ignorable="d"
-        Title="Monitor" Height="350" Width="525">
+        Title="Monitor" Height="350" Width="525" WindowState="Maximized">
     <Grid>
-        <ListBox>
-            <ListBoxItem>asdasd</ListBoxItem>
-            <ListBoxItem>sdfsdf</ListBoxItem>
-        </ListBox>
+        <StackPanel>
+            <Label Height="30">Storage Node Info:</Label>
+            <ListView Margin="10" Name="nodeList">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Name" Width="120" DisplayMemberBinding="{Binding nodeName}" />
+                        <GridViewColumn Header="Host" Width="50" DisplayMemberBinding="{Binding host}" />
+                        <GridViewColumn Header="Available Bytes" Width="150" DisplayMemberBinding="{Binding availaleBytes}" />
+                        <GridViewColumn Header="Total Bytes" Width="150" DisplayMemberBinding="{Binding totalBytes}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Label Height="30">File Info:</Label>
+            <ListView Margin="10" Name="fileList">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="File Name" Width="50" DisplayMemberBinding="{Binding fileName}" />
+                        <GridViewColumn Header="UUID" Width="100" DisplayMemberBinding="{Binding uuid}" />
+                        <GridViewColumn Header="Initial Bytes" Width="100" DisplayMemberBinding="{Binding initSize}" />
+                        <GridViewColumn Header="Final Bytes" Width="100" DisplayMemberBinding="{Binding finalSize}" />
+                        <GridViewColumn Header="Main Node" Width="150" DisplayMemberBinding="{Binding mainNode}" />
+                        <GridViewColumn Header="BackUp Node" Width="150" DisplayMemberBinding="{Binding backupNode}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
     </Grid>
 </Window>
