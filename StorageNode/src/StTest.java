@@ -18,6 +18,9 @@ public class StTest {
             exec.submit(i);
             Thread.sleep(100);
         }
+        //Add a new endpoint after one minute.
+        Thread.sleep(60000);
+        exec.submit(new StartMain(new String[]{"storage5.properties"}));
         exec.shutdown();
     }
 }

@@ -12,7 +12,6 @@ import java.security.InvalidKeyException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
-import java.sql.SQLSyntaxErrorException;
 import java.util.ArrayList;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
@@ -68,6 +67,10 @@ public class FileClient {
         PrintStream out;
         try {
             File tmp = new File(fpath);
+            if(!tmp.exists()){
+                System.out.println("Such file doesn't exist!");
+                return;
+            }
             String fname = tmp.getName();
             long flen = tmp.length();
 
@@ -207,6 +210,7 @@ public class FileClient {
                             res=aes(mid,DECRYPT);
                             os.write(res,0,res.length);
                         }
+
                         os.flush();
                         os.close();
                         out.close();
@@ -230,6 +234,19 @@ public class FileClient {
 
     static void delete(String uuid){
         try {
+            PrintWriter out = new PrintWriter(socket.getOutputStream());
+            out.write("delete\n");
+            out.write(uuid+"\n");
+            out.flush();
+            BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+
+            String status=br.readLine();
+            if(status.equals("null")){
+                System.out.println(">>Such file doesn't exist on the server!");
+            }
+            else {
+                System.out.println(">>Delete the file successfully!");
+            }
             socket.close();
         } catch (IOException e) {
             e.printStackTrace();

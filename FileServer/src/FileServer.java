@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class FIleServer {
+public class FileServer {
     static final int SERVER_HEART_PORT =30001;
     static final int SERVER_CLIENT_PORT=30002;
     static final int SERVER_FILEOP_PORT=30003;
@@ -13,10 +13,11 @@ public class FIleServer {
     static final Map <String,String> registeredStNode=new HashMap<>();
     static final List<StNodeInfo> stNodeList=new ArrayList<>();
     static List<FileInfo> fileList;
+    static final List<String> deleteFile=new ArrayList<>();
 
     private List<Runnable> taskList;
 
-    private FIleServer(){
+    private FileServer(){
         taskList =new LinkedList<>();
     }
 
@@ -39,12 +40,13 @@ public class FIleServer {
 
     public static void main(String[] args){
         try {
-            FIleServer ser=new FIleServer();
+            FileServer ser=new FileServer();
             ser.init();
             ser.taskList.add(new HeartbeatListener());
             ser.taskList.add(new NodeAliveChecker());
             ser.taskList.add(new ClientListener());
             ser.taskList.add(new FileOperationListener());
+            ser.taskList.add(new FileDeleter());
             ExecutorService exec= Executors.newCachedThreadPool();
             for(Object i:ser.taskList){
                 exec.execute((Runnable) i);
@@ -65,8 +67,8 @@ class HeartbeatListener implements Runnable{
             byte[] buffer=new byte[1024];
             DatagramPacket datapacket=new DatagramPacket(buffer,buffer.length);
             try {
-                InetAddress add=InetAddress.getByName(FIleServer.SERVER_IP);
-                DatagramSocket soc=new DatagramSocket(FIleServer.SERVER_HEART_PORT,add);
+                InetAddress add=InetAddress.getByName(FileServer.SERVER_IP);
+                DatagramSocket soc=new DatagramSocket(FileServer.SERVER_HEART_PORT,add);
                 soc.receive(datapacket);
                 soc.close();
                 String msg=new String(buffer,0,datapacket.getLength());
@@ -76,7 +78,7 @@ class HeartbeatListener implements Runnable{
                 String[] arr=msg.split("\n");
                 StNodeInfo tmp=new StNodeInfo(arr[0],arr[1],Integer.parseInt(arr[2]),Long.parseLong(arr[3]), Long.parseLong(arr[4]));
                 tmp.lastVis=System.currentTimeMillis();
-                for(StNodeInfo i: FIleServer.stNodeList){
+                for(StNodeInfo i: FileServer.stNodeList){
                     if(i.nodeName.equals(arr[0])){
                         i.lastVis=tmp.lastVis;
                         i.volume.setAvailableBytes(tmp.volume.getAvailableBytes());
@@ -84,7 +86,7 @@ class HeartbeatListener implements Runnable{
                     }
                 }
                 if(!flag)
-                    FIleServer.stNodeList.add(tmp);
+                    FileServer.stNodeList.add(tmp);
             } catch (IOException e) {
                 System.out.println(e.getMessage());
             }
@@ -101,15 +103,15 @@ class NodeAliveChecker implements Runnable{
             boolean flag;
             do {
                 flag = false;
-                if(FIleServer.stNodeList.size()!=last){
-                    System.out.printf("Active Storage Node number : %d\n", FIleServer.stNodeList.size());
-                    last=FIleServer.stNodeList.size();
+                if(FileServer.stNodeList.size()!=last){
+                    System.out.printf("Active Storage Node number : %d\n", FileServer.stNodeList.size());
+                    last= FileServer.stNodeList.size();
                 }
-                for (int i = 0; i != FIleServer.stNodeList.size(); i++) {
-                    if (cutime - FIleServer.stNodeList.get(i).lastVis > 15000) {
+                for (int i = 0; i != FileServer.stNodeList.size(); i++) {
+                    if (cutime - FileServer.stNodeList.get(i).lastVis > 15000) {
                         System.out.printf("'%s' %s:%s is not active! It's removed From the file server!\n",
-                                FIleServer.stNodeList.get(i).nodeName, FIleServer.stNodeList.get(i).nodeIP, FIleServer.stNodeList.get(i).nodePort);
-                        FIleServer.stNodeList.remove(i);
+                                FileServer.stNodeList.get(i).nodeName, FileServer.stNodeList.get(i).nodeIP, FileServer.stNodeList.get(i).nodePort);
+                        FileServer.stNodeList.remove(i);
                         flag = true;
                         break;
                     }
@@ -128,7 +130,7 @@ class NodeAliveChecker implements Runnable{
 }
 
 class ClientListener implements Runnable {
-    private ServerSocket ss = new ServerSocket(FIleServer.SERVER_CLIENT_PORT);
+    private ServerSocket ss = new ServerSocket(FileServer.SERVER_CLIENT_PORT);
     private Socket s;
     private InputStream is;
     private OutputStream os;
@@ -143,8 +145,8 @@ class ClientListener implements Runnable {
             String flen = br.readLine();
 
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(os));
-            if (FIleServer.fileList != null) {
-                for (FileInfo i : FIleServer.fileList) {
+            if (FileServer.fileList != null) {
+                for (FileInfo i : FileServer.fileList) {
                     if (i.md5.equals(md5) && i.actualLength != 0) {
                         bw.write("exist\n");
                         bw.close();
@@ -157,10 +159,10 @@ class ClientListener implements Runnable {
                 }
             }
 
-            Collections.sort(FIleServer.stNodeList);
-            if (FIleServer.stNodeList.size() >= 2) {
-                String mNode = FIleServer.stNodeList.get(0).nodeIP + " " + FIleServer.stNodeList.get(0).nodePort;
-                String bNode = FIleServer.stNodeList.get(1).nodeIP + " " + FIleServer.stNodeList.get(1).nodePort;
+            Collections.sort(FileServer.stNodeList);
+            if (FileServer.stNodeList.size() >= 2) {
+                String mNode = FileServer.stNodeList.get(0).nodeIP + " " + FileServer.stNodeList.get(0).nodePort;
+                String bNode = FileServer.stNodeList.get(1).nodeIP + " " + FileServer.stNodeList.get(1).nodePort;
                 bw.write(mNode + "\n");
                 bw.write(bNode + "\n");
 
@@ -173,7 +175,7 @@ class ClientListener implements Runnable {
                 System.out.printf(">>UUID of this file: %s\n", uuid);
                 System.out.printf(">>Allocating main Storage Node %s to the client.\n", mNode);
                 System.out.printf(">>Allocating backup Storage Node %s to the client.\n", bNode);
-                FIleServer.fileList.add(new FileInfo(fname, uuid, Long.parseLong(flen), mNode, bNode, md5));
+                FileServer.fileList.add(new FileInfo(fname, uuid, Long.parseLong(flen), mNode, bNode, md5));
 
                 bw.write(uuid + "\n");
 
@@ -183,7 +185,7 @@ class ClientListener implements Runnable {
             }
         }
         catch (IOException | FileServerException e){
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 
@@ -191,7 +193,7 @@ class ClientListener implements Runnable {
         try {
             String uuid = br.readLine();
             StringBuilder res=new StringBuilder();
-            for(FileInfo i: FIleServer.fileList){
+            for(FileInfo i: FileServer.fileList){
                 if(i.uuid.equals(uuid)){
                     res.append(i.fileName);res.append("\n");
                     res.append(i.mainNode);res.append("\n");res.append(i.backupNode);
@@ -204,6 +206,38 @@ class ClientListener implements Runnable {
             bw.close();
 
         } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    //Add the file to the delete trying list.
+    private void  delete(){
+        try{
+            String uuid=br.readLine();
+            int index=-1;
+            synchronized (FileServer.fileList){
+                for(int i = 0; i!= FileServer.fileList.size(); i++){
+                    if(FileServer.fileList.get(i).uuid.equals(uuid)){
+                        index=i;
+                        System.out.printf("%s is added to the delete trying list.",uuid);
+                        FileServer.deleteFile.add(uuid+"\n"+ FileServer.fileList.get(i).mainNode);
+                        FileServer.deleteFile.add(uuid+"\n"+ FileServer.fileList.get(i).backupNode);
+                        break;
+                    }
+                }
+            }
+
+            BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(os));
+            if(index==-1)
+                bw.write("null");
+            else
+            {
+                bw.write("suc");
+            }
+            bw.flush();
+            bw.close();
+        }
+        catch (IOException e){
             System.out.println(e.getMessage());
         }
     }
@@ -223,6 +257,9 @@ class ClientListener implements Runnable {
                     upload();
                 else if(command.equals("download"))
                     download();
+                else if(command.equals("delete")){
+                    delete();
+                }
 
                 br.close();
                 is.close();
@@ -249,31 +286,51 @@ class FileOperationListener implements Runnable{
             byte[] buffer=new byte[1024];
             DatagramPacket datapacket=new DatagramPacket(buffer,buffer.length);
             try {
-                InetAddress add = InetAddress.getByName(FIleServer.SERVER_IP);
-                DatagramSocket soc = new DatagramSocket(FIleServer.SERVER_FILEOP_PORT, add);
+                InetAddress add = InetAddress.getByName(FileServer.SERVER_IP);
+                DatagramSocket soc = new DatagramSocket(FileServer.SERVER_FILEOP_PORT, add);
                 soc.receive(datapacket);
                 soc.close();
                 String msg=new String(buffer,0,datapacket.getLength());
                 String[] arr=msg.split("\n");
 
-                //Save the final length of file.
                 if(arr[0].equals("upload")){
-                    for(FileInfo i:FIleServer.fileList)
+                    for(FileInfo i: FileServer.fileList)
                         if(arr[1].equals(i.uuid))
                         {
                             i.actualLength=Long.parseLong(arr[2]);
-                            System.out.printf("The actual length of the file %s is %d bytes.\n",i.uuid,i.actualLength);
+                            System.out.printf("[Upload] The actual length of the file %s is %d bytes.\n",i.uuid,i.actualLength);
                         }
                 }
                 else if(arr[0].equals("delete")){
-                    int flag=-1;
-                    for(int i=0;i!= FIleServer.fileList.size();i++)
-                        if(FIleServer.fileList.get(i).uuid.equals(arr[1]))
-                        {
-                            flag=i;
-                            break;
+                    String uuid=arr[1];
+                    String host=arr[2];
+                    int id=-1;
+                    synchronized (FileServer.fileList){
+                        for(int i = 0; i!= FileServer.fileList.size(); i++){
+                            if(FileServer.fileList.get(i).uuid.equals(uuid)){
+                                id=i;
+                                System.out.printf("[Delete] Remove the file info of %s.\n",uuid);
+                                break;
+                            }
                         }
-                    if(flag>0) FIleServer.fileList.remove(flag);
+                        if(id!=-1)
+                            FileServer.fileList.remove(id);
+                    }
+
+                    synchronized (FileServer.deleteFile)
+                    {
+                        id=-1;
+                        for(int i=0;i<FileServer.deleteFile.size();i++){
+                            if(FileServer.deleteFile.get(i).split("\n")[0].equals(uuid)&&
+                                    FileServer.deleteFile.get(i).split("\n")[1].equals(host)){
+                                id=i;
+                                System.out.printf("[Delete] Remove the file info %s on server %s in delete trying table.\n",uuid,host);
+                                break;
+                            }
+                        }
+                        if(id!=-1)
+                            FileServer.deleteFile.remove(id);
+                    }
                 }
                 writeFileInfo();
             }
@@ -285,7 +342,45 @@ class FileOperationListener implements Runnable{
 
     private void writeFileInfo() throws IOException {
         ObjectOutputStream osm =new ObjectOutputStream(new FileOutputStream("FileInfo.dat"));
-        osm.writeObject(FIleServer.fileList);
+        osm.writeObject(FileServer.fileList);
         osm.flush();osm.close();
+    }
+}
+
+class FileDeleter implements Runnable{
+    @Override
+    public void run() {
+        while (true) {
+            synchronized (FileServer.deleteFile){
+                for (int i = 0; i < FileServer.deleteFile.size(); i++) {
+                    String[] arr = FileServer.deleteFile.get(i).split("\n");
+                    String uuid = arr[0];
+                    String info = arr[1];
+                    sendDeleteInfo(uuid, info.split(" ")[0], Integer.parseInt(info.split(" ")[1]));
+                }
+            }
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    void sendDeleteInfo(String uuid,String ip,int port){
+        try {
+            Socket soc=new Socket(ip,port);
+            soc.setSoTimeout(3000);
+            BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(soc.getOutputStream()));
+            bw.write("delete\n");
+            bw.write(uuid+"\n");
+            bw.flush();
+            bw.close();
+            soc.close();
+            System.out.printf("Sending file deletion info of %s to %s:%d completely.\n",uuid,ip,port);
+        } catch (IOException e) {
+            System.out.println("Send delete info error: "+e.getMessage());
+        }
+
     }
 }

@@ -1,4 +1,3 @@
-import javax.jnlp.FileOpenService;
 import java.io.*;
 import java.net.*;
 import java.util.*;
@@ -108,6 +107,8 @@ class Volume{
         available-=val;
     }
 
+    void setAvailableBytes(long val){available=val;}
+
     long getTotalBytes(){
         return length;
     }
@@ -135,6 +136,7 @@ class FileListener implements Runnable {
     private final Volume volume;
     private final String fileServerIP;
     private final Properties prop;
+    private final int NODE_PORT;
     private final int FILEOP_PORT=30003;
     private ServerSocket ss;
     Socket soc;
@@ -142,23 +144,47 @@ class FileListener implements Runnable {
     FileListener(StorageNode a) throws IOException
     {
         FilePort=a.nodePort;rootDir=a.rootDir;nodeName=a.nodeName;
-        volume=a.volume;prop=a.prop;fileServerIP=a.fileServerIP;
+        volume=a.volume;prop=a.prop;fileServerIP=a.fileServerIP;NODE_PORT=a.nodePort;
         ss=new ServerSocket(FilePort);
     }
 
     private void notifyUploadFileSize(String uuid,long size){
-        InetAddress add = null;
+        InetAddress add;
         while (true){
             try {
                 add = InetAddress.getByName(fileServerIP);
                 byte[] buffer=String.format("upload\n%s\n%d",uuid,size).getBytes();
                 DatagramPacket dp=new DatagramPacket(buffer,buffer.length,add,FILEOP_PORT);
-                DatagramSocket dc=new DatagramSocket();
-                dc.send(dp);
-                dc.close();
+                DatagramSocket dataSocket=new DatagramSocket();
+                dataSocket.send(dp);
+                dataSocket.close();
                 break;
             } catch (IOException e) {
                 System.out.println(e.getMessage());
+            }
+        }
+    }
+
+    private void notifyDeleteFiles(String uuid) {
+        final String LOCAL_HOST="127.0.0.1 "+NODE_PORT;
+        InetAddress add ;
+        while (true){
+            try {
+                add = InetAddress.getByName(fileServerIP);
+                byte[] buffer=String.format("delete\n%s\n%s\n",uuid,LOCAL_HOST).getBytes();
+                DatagramPacket dp=new DatagramPacket(buffer,buffer.length,add,FILEOP_PORT);
+                DatagramSocket dc=new DatagramSocket();
+                dc.send(dp);
+                dc.close();
+                System.out.printf("[%s-notify-remove] Notify the server %s of the file %s's remove info completely.\n",nodeName,LOCAL_HOST,uuid);
+                break;
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e1) {
+                    e1.printStackTrace();
+                }
             }
         }
     }
@@ -188,15 +214,16 @@ class FileListener implements Runnable {
             volume.minus(cnt);
             System.out.printf("[%s-file] Save file finished. Total %d bytes.\n",nodeName,cnt);
 
+            notifyUploadFileSize(uuid,cnt);
+
             bs.close();
             fout.close();
-            soc.close();
             br.close();
+            soc.close();
 
             //Forward the file to the backup storage node.
             if (!forwardTable.equals("null"))
             {
-                notifyUploadFileSize(uuid,cnt);
                 forward(uuid,forwardTable);
                 System.out.printf("[%s-file] Forward file finished.\n",nodeName);
             }
@@ -206,7 +233,7 @@ class FileListener implements Runnable {
     }
 
     //Forward the file to the server.
-    void forward(String uuid,String forwardTable){
+    private void forward(String uuid,String forwardTable){
         Socket socket;
         String[] arr=forwardTable.split(" ");
         try{
@@ -228,6 +255,7 @@ class FileListener implements Runnable {
                 }
                 bout.flush();
 
+                bin.close();
                 out.close();
                 bout.close();
                 socket.close();
@@ -239,7 +267,8 @@ class FileListener implements Runnable {
         }
     }
 
-    void download(String uuid){
+    //Send file to the client.
+    private void download(String uuid){
         try {
 
             FileInputStream fin=new FileInputStream(new File(rootDir,uuid));
@@ -254,9 +283,31 @@ class FileListener implements Runnable {
             }
             out.flush();
             out.close();
+            fin.close();
             System.out.printf("[%s-download] Send file finished. Total %d bytes.\n",nodeName,cnt);
         } catch (IOException e) {
             System.out.println(e.getMessage());
+        }
+    }
+
+    //Delete the file on the server.
+    private void delete(String uuid){
+        File dir=new File(rootDir,uuid);
+        if(dir.exists()){
+            long len=dir.length();
+            volume.setAvailableBytes(volume.getAvailableBytes()+len);
+            if(dir.delete())
+            {
+                System.out.printf("[%s-delete] Delete file %s successfully! %d bytes of space are freed!\n",nodeName,uuid,len);
+                notifyDeleteFiles(uuid);
+            }
+            else {
+                System.out.printf("[%s-delete] Delete file %s Failed!\n",nodeName,uuid);
+            }
+        }
+        else {
+            //Notify the file server again if the file has been deleted yet but receive the delete command again.
+            notifyDeleteFiles(uuid);
         }
     }
 
@@ -275,15 +326,15 @@ class FileListener implements Runnable {
                     upload();
                 else if(commmand.equals("download"))
                     download(br.readLine());
+                else if(commmand.equals("delete")){
+                    delete(br.readLine());
+                }
             }
             catch (IOException e){
                 System.out.println(e.getMessage());
             }
-
         }
     }
-
-
 }
 
 //To notify the server that this node is available and update the volume information.
