@@ -28,6 +28,9 @@ namespace Monitor
 
         public ObservableCollection<StNodeInfo> nodeInfo;
         public ObservableCollection<FileInfo> fileInfo;
+        Thread nodeInfoListenTask;
+        Thread fileInfoListenerTask;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -37,13 +40,12 @@ namespace Monitor
             fileList.ItemsSource = fileInfo;
 
          
-            Thread nodeInfoListenTask = new Thread(nodeInfoListener);
+            nodeInfoListenTask = new Thread(nodeInfoListener); nodeInfoListenTask.IsBackground = true;
             nodeInfoListenTask.Start();
 
-            Thread fileInfoListenerTask = new Thread(fileInfoListener);
+            fileInfoListenerTask = new Thread(fileInfoListener); fileInfoListenerTask.IsBackground = true;
             fileInfoListenerTask.Start();
         }
-
 
         #region StorageNodeInfoListener
         string[] nodeArr;

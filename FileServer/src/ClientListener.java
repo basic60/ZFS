@@ -22,8 +22,8 @@ public class ClientListener implements Runnable {
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(os));
             if (FileServer.fileList != null) {
                 for (FileInfo i : FileServer.fileList) {
-                    if (i.md5.equals(md5) && i.actualLength != 0) {
-                        bw.write("exist\n");
+                    if (i.md5.equals(md5)) {
+                        bw.write("exist\n"+i.uuid);
                         bw.close();
                         br.close();
                         is.close();
@@ -69,10 +69,14 @@ public class ClientListener implements Runnable {
             String uuid = br.readLine();
             StringBuilder res=new StringBuilder();
             for(FileInfo i: FileServer.fileList){
-                if(i.uuid.equals(uuid)){
+                if(i.uuid.equals(uuid)&&i.actualLength>0){
                     res.append(i.fileName);res.append("\n");
                     res.append(i.mainNode);res.append("\n");res.append(i.backupNode);
                     break;
+                }
+                else if(i.uuid.equals(uuid)&&i.actualLength==0){
+                    FileServer.deleteFile.add(uuid+"\n"+i.mainNode);
+                    FileServer.deleteFile.add(uuid+"\n"+i.backupNode);
                 }
             }
             BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(os));

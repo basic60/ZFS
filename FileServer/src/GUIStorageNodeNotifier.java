@@ -22,7 +22,7 @@ public class GUIStorageNodeNotifier implements Runnable {
                 DatagramSocket dSocket=new DatagramSocket();
                 dSocket.send(dp);
                 dSocket.close();
-                System.out.println("[Notify-GUI] Send the storage node info to the GUI.");
+            //    System.out.println("[Notify-GUI] Send the storage node info to the GUI.");
                 Thread.sleep(1000);
             } catch (InterruptedException | IOException e) {
                 System.out.println(e.getMessage());

@@ -87,7 +87,7 @@ public class FileClient {
             BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             nodeMain = br.readLine();
             if (nodeMain.equals("exist")) {
-                System.out.println("This file has been sent to the server yet!");
+                System.out.printf("This file has been sent to the server yet!The UUID of it is %s\n",br.readLine());
                 br.close();
                 out.close();
                 socket.close();
@@ -186,9 +186,11 @@ public class FileClient {
                         out.println(uuid);
                         out.flush();
 
+
                         //Start download the file.
                         OutputStream os = new FileOutputStream(new File(ROOT_DIR,fileName));
                         BufferedInputStream bin = new BufferedInputStream(new GZIPInputStream(socket.getInputStream()));
+
                         int cnt=0;int tot=0;int val;
                         byte[] fdata=new byte[1040];
                         while ((val=bin.read())!=-1){

@@ -6,7 +6,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/UIBlocks.MaterialDesignTheme;component/Themes/Generic.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Monitor;component/ListStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
