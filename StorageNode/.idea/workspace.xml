@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71307731-3aad-4ab7-8ac9-240f4cc13370" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/FileListener.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node5/fb75c9b3-ede5-47b8-97a7-eca29d801675" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../FileClient/test.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/StTest.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileClient/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FileClient/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileClient/src/FileClient.java" afterPath="$PROJECT_DIR$/../FileClient/src/FileClient.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FileServer/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/src/ClientListener.java" afterPath="$PROJECT_DIR$/../FileServer/src/ClientListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/src/GUIFileNotifier.java" afterPath="$PROJECT_DIR$/../FileServer/src/GUIFileNotifier.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FileServer/src/GUIStorageNodeNotifier.java" afterPath="$PROJECT_DIR$/../FileServer/src/GUIStorageNodeNotifier.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Monitor/Monitor/App.xaml" afterPath="$PROJECT_DIR$/../Monitor/Monitor/App.xaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Monitor/Monitor/MainWindow.xaml" afterPath="$PROJECT_DIR$/../Monitor/Monitor/MainWindow.xaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Monitor/Monitor/MainWindow.xaml.cs" afterPath="$PROJECT_DIR$/../Monitor/Monitor/MainWindow.xaml.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Monitor/Monitor/Monitor.csproj" afterPath="$PROJECT_DIR$/../Monitor/Monitor/Monitor.csproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StorageNode.java" afterPath="$PROJECT_DIR$/src/StorageNode.java" />
     </list>
@@ -40,50 +33,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="StorageNode.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StorageNode.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/StorageNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="143" column="54" lean-forward="true" selection-start-line="143" selection-start-column="54" selection-end-line="143" selection-end-column="54" />
+            <state relative-caret-position="372">
+              <caret line="82" column="64" lean-forward="true" selection-start-line="82" selection-start-column="64" selection-end-line="82" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#main#0;class#StorageNode#0" expanded="false" />
+                <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
+                <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
                 <element signature="class#Volume#0" expanded="false" />
                 <element signature="method#Volume#0;class#Volume#0" expanded="false" />
                 <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
-                <element signature="e#4340#4341#0" expanded="true" />
-                <element signature="e#4367#4368#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/StTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-              <folding>
-                <element signature="class#StartMain#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FileListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="164" column="0" lean-forward="true" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#FileListener#0;class#FileListener#0" expanded="false" />
-                <element signature="method#notifyUploadFileSize#0;class#FileListener#0" expanded="false" />
-                <element signature="method#notifyDeleteFiles#0;class#FileListener#0" expanded="false" />
-                <element signature="method#upload#0;class#FileListener#0" expanded="false" />
-                <element signature="method#forward#0;class#FileListener#0" expanded="false" />
-                <element signature="method#download#0;class#FileListener#0" expanded="false" />
-                <element signature="method#delete#0;class#FileListener#0" expanded="false" />
+                <element signature="e#4799#4800#0" expanded="true" />
+                <element signature="e#4826#4827#0" expanded="true" />
+                <element signature="method#run#0;class#RegisterAndUpdate#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -166,70 +130,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StorageNode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StorageNode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StTest.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StorageNode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StorageNode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StorageNode.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StorageNode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StorageNode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StorageNode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StorageNode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Node3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -251,7 +151,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.StTest">
+  <component name="RunManager" selected="Application.StorageNode">
     <configuration default="false" name="StorageNode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="StorageNode" />
@@ -675,8 +575,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.StTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.StorageNode" />
+        <item index="0" class="java.lang.String" itemvalue="Application.StorageNode" />
+        <item index="1" class="java.lang.String" itemvalue="Application.StTest" />
       </list>
     </recent_temporary>
   </component>
@@ -714,12 +614,12 @@
       <workItem from="1500169972769" duration="4323000" />
       <workItem from="1500208802936" duration="7103000" />
       <workItem from="1500220183778" duration="582000" />
-      <workItem from="1500268705048" duration="6538000" />
+      <workItem from="1500268705048" duration="9125000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177445000" />
+    <option name="totallyTimeSpent" value="180032000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -748,13 +648,13 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20493563" sideWeight="0.4936508" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20493563" sideWeight="0.4936508" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29898074" sideWeight="0.49785408" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29898074" sideWeight="0.49785408" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27038628" sideWeight="0.5063492" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -772,7 +672,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="63" />
+      <option name="time" value="64" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -785,9 +685,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="class#StartMain#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -797,12 +695,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
-            <element signature="e#4340#4341#0" expanded="true" />
-            <element signature="e#4367#4368#0" expanded="true" />
+            <element signature="e#4799#4800#0" expanded="true" />
+            <element signature="e#4826#4827#0" expanded="true" />
+            <element signature="method#run#0;class#RegisterAndUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -811,8 +711,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StorageNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="class#StartMain#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
+            <element signature="class#Volume#0" expanded="false" />
+            <element signature="method#Volume#0;class#Volume#0" expanded="false" />
+            <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
+            <element signature="e#4799#4800#0" expanded="true" />
+            <element signature="e#4826#4827#0" expanded="true" />
+            <element signature="method#run#0;class#RegisterAndUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -823,12 +739,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
-            <element signature="e#4340#4341#0" expanded="true" />
-            <element signature="e#4367#4368#0" expanded="true" />
+            <element signature="e#4799#4800#0" expanded="true" />
+            <element signature="e#4826#4827#0" expanded="true" />
+            <element signature="method#run#0;class#RegisterAndUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -839,28 +757,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
-            <element signature="e#4340#4341#0" expanded="true" />
-            <element signature="e#4367#4368#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StorageNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#StorageNode#0" expanded="false" />
-            <element signature="class#Volume#0" expanded="false" />
-            <element signature="method#Volume#0;class#Volume#0" expanded="false" />
-            <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
-            <element signature="e#4340#4341#0" expanded="true" />
-            <element signature="e#4367#4368#0" expanded="true" />
+            <element signature="e#4799#4800#0" expanded="true" />
+            <element signature="e#4826#4827#0" expanded="true" />
+            <element signature="method#run#0;class#RegisterAndUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -869,9 +773,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding>
-            <element signature="class#StartMain#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -888,12 +790,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
-            <element signature="e#4340#4341#0" expanded="true" />
-            <element signature="e#4367#4368#0" expanded="true" />
+            <element signature="e#4799#4800#0" expanded="true" />
+            <element signature="e#4826#4827#0" expanded="true" />
+            <element signature="method#run#0;class#RegisterAndUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -904,12 +808,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
-            <element signature="e#4340#4341#0" expanded="true" />
-            <element signature="e#4367#4368#0" expanded="true" />
+            <element signature="e#4799#4800#0" expanded="true" />
+            <element signature="e#4826#4827#0" expanded="true" />
+            <element signature="method#run#0;class#RegisterAndUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -920,35 +826,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
-            <element signature="e#4340#4341#0" expanded="true" />
-            <element signature="e#4367#4368#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage1.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StorageNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#StorageNode#0" expanded="false" />
-            <element signature="class#Volume#0" expanded="false" />
-            <element signature="method#Volume#0;class#Volume#0" expanded="false" />
-            <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
-            <element signature="e#4340#4341#0" expanded="true" />
-            <element signature="e#4367#4368#0" expanded="true" />
+            <element signature="e#4799#4800#0" expanded="true" />
+            <element signature="e#4826#4827#0" expanded="true" />
+            <element signature="method#run#0;class#RegisterAndUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -966,12 +851,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
-            <element signature="e#4340#4341#0" expanded="true" />
-            <element signature="e#4367#4368#0" expanded="true" />
+            <element signature="e#4799#4800#0" expanded="true" />
+            <element signature="e#4826#4827#0" expanded="true" />
+            <element signature="method#run#0;class#RegisterAndUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -989,12 +876,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
-            <element signature="e#4340#4341#0" expanded="true" />
-            <element signature="e#4367#4368#0" expanded="true" />
+            <element signature="e#4799#4800#0" expanded="true" />
+            <element signature="e#4826#4827#0" expanded="true" />
+            <element signature="method#run#0;class#RegisterAndUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1012,12 +901,39 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
-            <element signature="e#4340#4341#0" expanded="true" />
-            <element signature="e#4367#4368#0" expanded="true" />
+            <element signature="e#4799#4800#0" expanded="true" />
+            <element signature="e#4826#4827#0" expanded="true" />
+            <element signature="method#run#0;class#RegisterAndUpdate#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage1.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StorageNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
+            <element signature="class#Volume#0" expanded="false" />
+            <element signature="method#Volume#0;class#Volume#0" expanded="false" />
+            <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
+            <element signature="e#4799#4800#0" expanded="true" />
+            <element signature="e#4826#4827#0" expanded="true" />
+            <element signature="method#run#0;class#RegisterAndUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1035,12 +951,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
-            <element signature="e#4340#4341#0" expanded="true" />
-            <element signature="e#4367#4368#0" expanded="true" />
+            <element signature="e#4799#4800#0" expanded="true" />
+            <element signature="e#4826#4827#0" expanded="true" />
+            <element signature="method#run#0;class#RegisterAndUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1058,12 +976,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
-            <element signature="e#4340#4341#0" expanded="true" />
-            <element signature="e#4367#4368#0" expanded="true" />
+            <element signature="e#4799#4800#0" expanded="true" />
+            <element signature="e#4826#4827#0" expanded="true" />
+            <element signature="method#run#0;class#RegisterAndUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1081,12 +1001,14 @@
           <caret line="40" column="43" lean-forward="true" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
-            <element signature="e#4340#4341#0" expanded="true" />
-            <element signature="e#4367#4368#0" expanded="true" />
+            <element signature="e#4799#4800#0" expanded="true" />
+            <element signature="e#4826#4827#0" expanded="true" />
+            <element signature="method#run#0;class#RegisterAndUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1112,12 +1034,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
-            <element signature="e#4340#4341#0" expanded="true" />
-            <element signature="e#4367#4368#0" expanded="true" />
+            <element signature="e#4799#4800#0" expanded="true" />
+            <element signature="e#4826#4827#0" expanded="true" />
+            <element signature="method#run#0;class#RegisterAndUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1135,12 +1059,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
-            <element signature="e#4340#4341#0" expanded="true" />
-            <element signature="e#4367#4368#0" expanded="true" />
+            <element signature="e#4799#4800#0" expanded="true" />
+            <element signature="e#4826#4827#0" expanded="true" />
+            <element signature="method#run#0;class#RegisterAndUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1258,10 +1184,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storage2.properties">
+    <entry file="file://$PROJECT_DIR$/src/StTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="315">
+          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1273,45 +1200,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/storage2.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/FileListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="164" column="0" lean-forward="true" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
+        <state relative-caret-position="231">
+          <caret line="91" column="23" lean-forward="true" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#FileListener#0;class#FileListener#0" expanded="false" />
             <element signature="method#notifyUploadFileSize#0;class#FileListener#0" expanded="false" />
             <element signature="method#notifyDeleteFiles#0;class#FileListener#0" expanded="false" />
-            <element signature="method#upload#0;class#FileListener#0" expanded="false" />
             <element signature="method#forward#0;class#FileListener#0" expanded="false" />
             <element signature="method#download#0;class#FileListener#0" expanded="false" />
-            <element signature="method#delete#0;class#FileListener#0" expanded="false" />
+            <element signature="method#run#0;class#FileListener#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/StorageNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="143" column="54" lean-forward="true" selection-start-line="143" selection-start-column="54" selection-end-line="143" selection-end-column="54" />
+        <state relative-caret-position="372">
+          <caret line="82" column="64" lean-forward="true" selection-start-line="82" selection-start-column="64" selection-end-line="82" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#StorageNode#0;class#StorageNode#0" expanded="false" />
+            <element signature="method#refreshVolume#0;class#StorageNode#0" expanded="false" />
             <element signature="class#Volume#0" expanded="false" />
             <element signature="method#Volume#0;class#Volume#0" expanded="false" />
             <element signature="method#volumeToString#0;class#Volume#0" expanded="false" />
-            <element signature="e#4340#4341#0" expanded="true" />
-            <element signature="e#4367#4368#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-          <folding>
-            <element signature="class#StartMain#0" expanded="false" />
+            <element signature="e#4799#4800#0" expanded="true" />
+            <element signature="e#4826#4827#0" expanded="true" />
+            <element signature="method#run#0;class#RegisterAndUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>

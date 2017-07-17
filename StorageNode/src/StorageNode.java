@@ -1,5 +1,6 @@
 import java.io.*;
 import java.net.*;
+import java.sql.SQLSyntaxErrorException;
 import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -59,13 +60,26 @@ public class StorageNode {
     /*
     *<========Use StTest.java to run multiple threads of Storage Node at once=================>
     */
+
+    public static Map<String,String> mp=new HashMap<>();
     public static void main(String[] args){
         try{
-            if(args.length!=1){
-                System.out.println("Error: Please input the configure file name name!!!");
+
+            mp.put("1","storage1.properties");
+            mp.put("2","storage2.properties");
+            mp.put("3","storage3.properties");
+            mp.put("4","storage4.properties");
+            mp.put("5","storage5.properties");
+            Scanner input = new Scanner(System.in);
+            String arg=input.next();
+            if(!mp.containsKey(arg)){
+                System.out.println("Please input the correct command!");
                 return;
             }
-            StorageNode node=new StorageNode(args[0]);
+            else
+                arg=mp.get(arg);
+
+            StorageNode node=new StorageNode(arg);
             ExecutorService exec= Executors.newCachedThreadPool();
             node.taskList.add(new RegisterAndUpdate(node));
             node.taskList.add(new FileListener(node));

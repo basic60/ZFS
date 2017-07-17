@@ -74,10 +74,6 @@ public class ClientListener implements Runnable {
                     res.append(i.mainNode);res.append("\n");res.append(i.backupNode);
                     break;
                 }
-                else if(i.uuid.equals(uuid)&&i.actualLength==0){
-                    FileServer.deleteFile.add(uuid+"\n"+i.mainNode);
-                    FileServer.deleteFile.add(uuid+"\n"+i.backupNode);
-                }
             }
             BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(os));
             bw.write(res.length()>0?res.toString():"null");
