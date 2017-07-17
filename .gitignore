@@ -249,6 +249,7 @@ ModelManifest.xml
 *.exe
 test.txt
 *.dat
+*.pdf
 /StorageNode/Node1/*
 /StorageNode/Node2/*
 /StorageNode/Node3/*

@@ -64,9 +64,11 @@ class FileListener implements Runnable {
 
     //Upload the file.
     void upload(){
-        try{
+        String uuid=null;FileOutputStream fout=null;
+        try
+        {
             String forwardTable = br.readLine();
-            String uuid = br.readLine();
+            uuid = br.readLine();
 
             System.out.printf("[%s-file] Start receiving file\n", nodeName);
             System.out.printf("[%s-file] The uuid of this file is : %s\n", nodeName, uuid);
@@ -76,7 +78,7 @@ class FileListener implements Runnable {
             BufferedInputStream bs = new BufferedInputStream(soc.getInputStream());
 
             //Save file to the disk.
-            FileOutputStream fout = new FileOutputStream(new File(rootDir, uuid));
+            fout = new FileOutputStream(new File(rootDir, uuid));
             int tmp;
             long cnt = 0;
             while ((tmp = bs.read()) != -1) {
@@ -101,7 +103,19 @@ class FileListener implements Runnable {
                 System.out.printf("[%s-file] Forward file finished.\n",nodeName);
             }
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            System.out.println(e.getMessage()+"here");
+            File fdel=new File(rootDir,uuid);
+            try {
+                fout.close();
+            } catch (IOException e1) {
+                System.out.println(e.getMessage());
+            }
+            if(fdel.exists()){
+                if(fdel.delete()){
+                    System.out.printf("[%s-fail] Delete the fail file successfully!",nodeName);
+                    notifyDeleteFiles(uuid);
+                }
+            }
         }
     }
 
